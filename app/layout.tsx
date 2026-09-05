@@ -16,19 +16,16 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://docs.siegfriedoutreach.com'),
   title: {
-    template: '%s | Siegfried Outreach Official Documentation & Guide',
-    default: 'Siegfried Outreach Platform - Official User Guide, API & Docs (docs.siegfriedoutreach.com)',
+    template: '%s | Siegfried Docs',
+    default: 'Siegfried Outreach - AI Social & Campaign Docs',
   },
   description:
-    'Comprehensive bilingual (English & Hindi) step-by-step user manual, real-world case studies, and developer reference for Siegfried Outreach Platform. Master Multi-Platform Social Studio, Indian Festivals Autopilot, WhatsApp Broadcasts, Passkey Security, and MCP AI Agent integrations.',
+    'Official user manual and developer API guide for Siegfried Outreach Platform. Featuring Multi-Platform Social Studio, WhatsApp Broadcasts, Passkey Security, and MCP Tools.',
   keywords: [
     'Siegfried Outreach',
     'Siegfried Outreach Docs',
     'Social Media Automation',
     'AI Social Media Manager',
-    'Instagram Auto Poster',
-    'LinkedIn Post Scheduler',
-    'Indian Festivals Social Media Autopilot',
     'WhatsApp Broadcast API',
     'Telegram Marketing Bot',
     'Passkey FIDO2 Authentication',
@@ -36,16 +33,11 @@ export const metadata: Metadata = {
     'Cursor MCP Tools',
     'Claude Desktop MCP',
     'AI Blog Writer',
-    'AI Slide Maker',
-    'AI Video Avatar',
     'D2C 100x Growth Playbook',
-    'Enterprise Outreach Platform',
-    'Fumadocs Documentation',
-    'सिएगफ्रीड आउटरीच यूजर गाइड',
-    'सोशल मीडिया ऑटोमेशन'
+    'सिएगफ्रीड आउटरीच'
   ],
   authors: [
-    { name: 'Siegfried Outreach Engineering & Growth Team', url: 'https://siegfriedoutreach.com' }
+    { name: 'Siegfried Outreach Team', url: 'https://siegfriedoutreach.com' }
   ],
   creator: 'Siegfried Outreach Platform',
   publisher: 'Siegfried Outreach Inc.',
@@ -55,26 +47,21 @@ export const metadata: Metadata = {
     types: {
       'application/rss+xml': 'https://docs.siegfriedoutreach.com/feed.xml',
     },
-    languages: {
-      'en-US': 'https://docs.siegfriedoutreach.com',
-      'hi-IN': 'https://docs.siegfriedoutreach.com',
-    },
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    alternateLocale: 'hi_IN',
     url: 'https://docs.siegfriedoutreach.com',
-    siteName: 'Siegfried Outreach Documentation',
-    title: 'Siegfried Outreach Platform - Official User Guide, API & Docs',
+    siteName: 'Siegfried Outreach Docs',
+    title: 'Siegfried Outreach Platform - Official User Guide & Docs',
     description:
-      'Master AI-driven multi-platform social media publishing, WhatsApp campaigns, Indian festival auto-pilot, passkey security, and MCP agent workflows.',
+      'Master AI-driven multi-platform social media publishing, WhatsApp campaigns, Indian festival auto-pilot, and MCP agent workflows.',
     images: [
       {
         url: '/images/social-studio-composer.png',
         width: 1200,
         height: 630,
-        alt: 'Siegfried Outreach Documentation & Feature Studio',
+        alt: 'Siegfried Outreach Documentation',
       },
     ],
   },
@@ -90,7 +77,6 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    nocache: false,
     googleBot: {
       index: true,
       follow: true,
@@ -103,7 +89,6 @@ export const metadata: Metadata = {
     'llms-txt': 'https://docs.siegfriedoutreach.com/llms.txt',
     'ai-agent-docs': 'https://docs.siegfriedoutreach.com/llms-full.txt',
     'indexnow-key': 'siegfriedoutreachindexnow2026',
-    'google-site-verification': '', // Ready for tomorrow GSC verification code
   },
 };
 
@@ -128,7 +113,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           },
           'query-input': 'required name=search_term_string',
         },
-        inLanguage: ['en-US', 'hi-IN'],
+        inLanguage: ['en-US'],
       },
       {
         '@type': 'Organization',
@@ -145,7 +130,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       {
         '@type': 'SoftwareApplication',
         name: 'Siegfried Outreach Platform',
-        operatingSystem: 'All (Cloud Web App, iOS, Android, Desktop MCP)',
+        operatingSystem: 'All (Web Cloud, iOS, Android, Desktop MCP)',
         applicationCategory: 'BusinessApplication',
         offers: {
           '@type': 'Offer',

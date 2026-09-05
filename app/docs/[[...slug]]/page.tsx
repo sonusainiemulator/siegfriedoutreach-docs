@@ -45,7 +45,7 @@ export default async function Page(props: {
     headline: page.data.title,
     description: page.data.description,
     url: canonicalUrl,
-    inLanguage: ['en-US', 'hi-IN'],
+    inLanguage: 'en-US',
     author: {
       '@type': 'Organization',
       name: 'Siegfried Outreach Platform',
@@ -77,10 +77,10 @@ export default async function Page(props: {
     mainEntity: [
       {
         '@type': 'Question',
-        name: `How do I use ${page.data.title} in Siegfried Outreach?`,
+        name: `How to use ${page.data.title} in Siegfried Outreach?`,
         acceptedAnswer: {
           '@type': 'Answer',
-          text: page.data.description || `Siegfried Outreach provides automated tools and bilingual guides for ${page.data.title}. Navigate to the platform dashboard and configure your settings in minutes.`,
+          text: page.data.description || `Siegfried Outreach provides automated tools and step-by-step workflows for ${page.data.title}. Navigate to your dashboard and configure channel settings in seconds.`,
         },
       },
       {
@@ -91,15 +91,22 @@ export default async function Page(props: {
           text: 'Siegfried Outreach supports Instagram, Facebook, LinkedIn, YouTube Shorts, X (Twitter), Pinterest, Reddit, WordPress, WhatsApp Cloud API, and Telegram with built-in MCP agent tools and passkey authentication.',
         },
       },
-      {
-        '@type': 'Question',
-        name: `Is there bilingual (Hindi & English) support available for ${page.data.title}?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, Siegfried Outreach offers 100% full bilingual documentation, prompt templates, and AI generation in both English and Hindi (हिंदी).',
-        },
-      },
     ],
+  };
+
+  // Map any h1 inside MDX to h2 to guarantee strictly ONE <h1> per page for 100/100 SEO score
+  const customComponents = {
+    ...defaultMdxComponents,
+    h1: (props: any) => (
+      <h2 className="text-2xl font-bold mt-8 mb-4 tracking-tight border-b border-zinc-200 dark:border-zinc-800 pb-2 text-zinc-900 dark:text-zinc-100" {...props} />
+    ),
+    Tab,
+    Tabs,
+    Callout,
+    Step,
+    Steps,
+    Accordion,
+    Accordions,
   };
 
   return (
@@ -120,18 +127,7 @@ export default async function Page(props: {
         <DocsTitle>{page.data.title}</DocsTitle>
         <DocsDescription>{page.data.description}</DocsDescription>
         <DocsBody>
-          <MDX
-            components={{
-              ...defaultMdxComponents,
-              Tab,
-              Tabs,
-              Callout,
-              Step,
-              Steps,
-              Accordion,
-              Accordions,
-            }}
-          />
+          <MDX components={customComponents} />
         </DocsBody>
       </DocsPage>
     </>
@@ -150,9 +146,15 @@ export async function generateMetadata(props: {
   if (!page) notFound();
 
   const title = page.data.title;
-  const description =
-    page.data.description ||
-    `Official documentation and step-by-step user guide for ${title} on Siegfried Outreach Platform.`;
+  let description = page.data.description || '';
+  if (!description || description.length < 120) {
+    description = `${title} - Complete step-by-step user guide, real-world industry case studies, and best practices on Siegfried Outreach Platform.`;
+  }
+  // Trim description to max 158 characters for perfect SEO
+  if (description.length > 158) {
+    description = description.slice(0, 155) + '...';
+  }
+
   const canonicalUrl = `https://docs.siegfriedoutreach.com${page.url}`;
 
   return {
@@ -160,13 +162,9 @@ export async function generateMetadata(props: {
     description,
     alternates: {
       canonical: canonicalUrl,
-      languages: {
-        'en-US': canonicalUrl,
-        'hi-IN': canonicalUrl,
-      },
     },
     openGraph: {
-      title: `${title} | Siegfried Outreach Docs`,
+      title: `${title} | Siegfried Docs`,
       description,
       url: canonicalUrl,
       type: 'article',
@@ -182,7 +180,7 @@ export async function generateMetadata(props: {
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${title} | Siegfried Outreach Docs`,
+      title: `${title} | Siegfried Docs`,
       description,
       images: ['/images/social-studio-composer.png'],
     },
