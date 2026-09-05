@@ -1,0 +1,30 @@
+---
+title: "Siegfried MCP Server Overview"
+description: "Architecture, available Model Context Protocol tools, and protocol compliance."
+---
+
+# 🔌 Siegfried MCP Server Overview
+
+Siegfried Outreach provides an official **Model Context Protocol (MCP)** server enabling AI coding assistants, autonomous agents, and IDEs to control social media workflows via 64+ native tools.
+
+<Tabs items={['English Architecture', 'हिंदी आर्किटेक्चर']}>
+  <Tab value="English Architecture">
+    ### Supported Tool Categories
+    - **Accounts**: `siegfried_get_user`, `siegfried_list_accounts`, `siegfried_list_pinterest_boards`.
+    - **Publishing & Scheduling**: `siegfried_create_post`, `siegfried_list_posts`, `siegfried_list_schedules`, `siegfried_delete_schedule`.
+    - **Interactions & Inbox**: `siegfried_list_comments`, `siegfried_post_comment`, `siegfried_list_conversations`, `siegfried_send_message`.
+    - **Analytics**: `siegfried_list_top_posts`, `siegfried_get_post_analytics`.
+    - **WordPress & Reddit**: `siegfried_publish_wordpress`, `siegfried_get_wordpress_site`, `siegfried_publish_reddit`, `siegfried_list_subreddits`.
+    - **Blotato Compatibility**: 100% drop-in alias support for Blotato workflows (`blotato_create_post`, `blotato_list_accounts`, etc.).
+  </Tab>
+
+  <Tab value="हिंदी आर्किटेक्चर">
+    ### समर्थित MCP टूल्स
+    - **अकाउंट्स**: `siegfried_get_user`, `siegfried_list_accounts`, `siegfried_list_pinterest_boards`।
+    - **पोस्टिंग और शेड्यूलिंग**: `siegfried_create_post`, `siegfried_list_posts`, `siegfried_list_schedules`।
+    - **कमेंट्स और इनबॉक्स**: `siegfried_list_comments`, `siegfried_post_comment`, `siegfried_send_message`।
+    - **एनालिटिक्स**: `siegfried_list_top_posts`, `siegfried_get_post_analytics`।
+    - **वर्डप्रेस और रेडिट**: `siegfried_publish_wordpress`, `siegfried_publish_reddit`।
+    - **Blotato कम्पैटिबिलिटी**: Blotato के सभी API टूल्स के साथ 100% कम्पैटिबल।
+  </Tab>
+</Tabs>

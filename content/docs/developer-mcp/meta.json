@@ -1,0 +1,8 @@
+{
+  "title": "Developer & MCP API",
+  "pages": [
+    "mcp-overview",
+    "cursor-and-claude",
+    "rest-api-reference"
+  ]
+}

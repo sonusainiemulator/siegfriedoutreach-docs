@@ -1,0 +1,32 @@
+---
+title: "REST API & Webhooks Reference"
+description: "Programmatic HTTP API endpoints for cross-platform social automation."
+---
+
+# 🌐 REST API & Webhooks Reference
+
+Authenticate all requests using the `siegfried-api-key` HTTP header.
+
+<Tabs items={['English Reference', 'हिंदी रेफरेंस']}>
+  <Tab value="English Reference">
+    ### Base URL
+    `https://api.siegfriedoutreach.com`
+
+    ### Key Endpoints
+    - `GET /api/accounts` - Retrieve all connected social media accounts.
+    - `POST /api/social-posts` - Create and publish a multi-platform post or draft.
+    - `GET /api/social-posts/analytics` - Fetch aggregated impression and engagement metrics.
+    - `POST /mcp` - JSON-RPC 2.0 endpoint for Model Context Protocol interactions.
+  </Tab>
+
+  <Tab value="हिंदी रेफरेंस">
+    ### बेस URL
+    `https://api.siegfriedoutreach.com`
+
+    ### मुख्य API एंडपॉइंट्स
+    - `GET /api/accounts` - कनेक्टेड अकाउंट्स की लिस्ट प्राप्त करें।
+    - `POST /api/social-posts` - नया पोस्ट बनाएं, ड्राफ्ट सेव करें या पब्लिश करें।
+    - `GET /api/social-posts/analytics` - एंगेजमेंट और इम्प्रेशन्स डेटा प्राप्त करें।
+    - `POST /mcp` - AI एजेंट्स के लिए JSON-RPC 2.0 MCP एंडपॉइंट।
+  </Tab>
+</Tabs>

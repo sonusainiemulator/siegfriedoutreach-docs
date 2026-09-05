@@ -1,0 +1,56 @@
+---
+title: "Connecting MCP to Cursor & Claude Desktop"
+description: "How to configure siegfried-social in Cursor IDE, Claude Desktop, and Antigravity."
+---
+
+# 💻 Connecting MCP to Cursor & Claude Desktop
+
+Easily connect Siegfried MCP to your favorite AI IDEs and desktop clients.
+
+<Tabs items={['English Setup', 'हिंदी सेटअप']}>
+  <Tab value="English Setup">
+    ### 1. Cursor IDE Configuration
+    Add the following to your `~/.cursor/mcp.json` or project `.cursor/mcp.json`:
+
+    ```json
+    {
+      "mcpServers": {
+        "siegfried-social": {
+          "command": "node",
+          "args": ["/path/to/mcp-siegfried-social/index.js"],
+          "env": {
+            "SIEGFRIED_API_KEY": "YOUR_API_KEY_HERE",
+            "BACKEND_PORT": "3001"
+          }
+        }
+      }
+    }
+    ```
+
+    ### 2. Claude Desktop Configuration
+    Add to `claude_desktop_config.json`:
+
+    ```json
+    {
+      "mcpServers": {
+        "siegfried-social": {
+          "command": "node",
+          "args": ["/path/to/mcp-siegfried-social/index.js"],
+          "env": {
+            "SIEGFRIED_API_KEY": "YOUR_API_KEY_HERE"
+          }
+        }
+      }
+    }
+    ```
+  </Tab>
+
+  <Tab value="हिंदी सेटअप">
+    ### Cursor और Claude Desktop में सेटअप कैसे करें?
+    1. **Cursor IDE**: अपनी `mcp.json` फाइल में `siegfried-social` सर्वर कॉन्फिगरेशन जोड़ें।
+    2. **Claude Desktop**: `claude_desktop_config.json` में ऊपर दिया गया JSON ब्लॉक पेस्ट करें और अपनी API Key डालें।
+    3. रीस्टार्ट करने के बाद Cursor / Claude चैट में सीधे प्रॉम्प्ट दें:
+       - *"List my connected Instagram and YouTube channels"*
+       - *"Schedule a post to LinkedIn for tomorrow at 10 AM"*
+  </Tab>
+</Tabs>

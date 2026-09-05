@@ -1,0 +1,18 @@
+{
+  "title": "Documentation",
+  "pages": [
+    "index",
+    "---Getting Started---",
+    "getting-started",
+    "---Social Media Studio---",
+    "social-media",
+    "---Analytics & Growth---",
+    "analytics",
+    "---AI Studio & Tools---",
+    "ai-studio",
+    "---Developer & MCP API---",
+    "developer-mcp",
+    "---Troubleshooting---",
+    "troubleshooting"
+  ]
+}
