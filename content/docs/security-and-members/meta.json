@@ -1,0 +1,8 @@
+{
+  "title": "Security, RBAC & Subscriptions",
+  "pages": [
+    "passkeys-and-biometrics",
+    "team-roles-and-permissions",
+    "plans-and-billing"
+  ]
+}

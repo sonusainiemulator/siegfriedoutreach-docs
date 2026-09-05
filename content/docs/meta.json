@@ -1,18 +1,14 @@
 {
-  "title": "Documentation",
+  "title": "User Guide",
   "pages": [
-    "index",
-    "---Getting Started---",
     "getting-started",
-    "---Social Media Studio---",
     "social-media",
-    "---Analytics & Growth---",
-    "analytics",
-    "---AI Studio & Tools---",
+    "ai-social-manager",
     "ai-studio",
-    "---Developer & MCP API---",
+    "campaign-hub",
     "developer-mcp",
-    "---Troubleshooting---",
+    "analytics",
+    "security-and-members",
     "troubleshooting"
   ]
 }

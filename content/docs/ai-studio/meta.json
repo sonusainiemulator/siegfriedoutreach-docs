@@ -1,8 +1,12 @@
 {
-  "title": "AI Studio & Tools",
+  "title": "AI Tools & Bot Studio",
   "pages": [
+    "chatbots-and-bot-studio",
     "ai-writer",
+    "ai-codex-and-assistant",
     "slide-maker",
-    "visual-generator"
+    "ai-avatar-and-video",
+    "visual-generator",
+    "hermes-skills"
   ]
 }

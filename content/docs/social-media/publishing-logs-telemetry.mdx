@@ -1,0 +1,47 @@
+---
+title: Publishing Logs & Error Telemetry (पब्लिशिंग लॉग्स और टेलीमेट्री)
+description: Real-time root cause failure diagnostics, HTTP error classification, and 1-click retry.
+---
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+
+# Social Publishing Telemetry & Error Intelligence
+
+The **Publishing Logs & Telemetry Dashboard** (`/social-media/logs`) gives total transparency into every social post dispatch across all connected networks (X/Twitter, Instagram, Facebook, YouTube, TikTok, LinkedIn, Pinterest, Reddit, WordPress).
+
+<Tabs items={['English Guide', 'हिंदी गाइड']}>
+  <Tab value="English Guide">
+    ### 🔍 Automated Error Categorization
+    Every failed dispatch is automatically analyzed by the Telemetry Engine and categorized into actionable buckets:
+    - `API_CREDITS_DEPLETED`: Third-party API balance empty (e.g. *X/Twitter HTTP 402*).
+    - `AUTH_TOKEN_EXPIRED`: OAuth access token expired or revoked.
+    - `PERMISSION_DENIED`: Missing admin or publisher permissions on the Facebook/LinkedIn Page.
+    - `RATE_LIMIT_EXCEEDED`: Daily or hourly posting threshold reached.
+    - `MEDIA_PROCESSING_FAILED`: Video resolution, codec, or aspect ratio rejected by the platform.
+    - `CONTENT_POLICY_VIOLATION`: Blocked keywords or restricted links.
+    - `NETWORK_TIMEOUT` / `SYSTEM_ERROR`: Worker queue network hiccups.
+
+    ### 🛠️ Diagnosing and Retrying Failed Posts:
+    1. Open **Social Studio ➔ Publishing Logs** (`/social-media/logs`).
+    2. View the **System Health Pill** and **Platform Health Tiles** at the top.
+    3. Click **Inspect** on any failed log to open the root-cause diagnostic drawer.
+    4. Review the bilingual explanation, origin tag (*Social Media API vs System*), and actionable resolution checklist.
+    5. Fix the issue (e.g. recharge API credits or re-link token) and click **Retry Now** to dispatch immediately.
+  </Tab>
+
+  <Tab value="हिंदी गाइड">
+    ### 🔍 एरर पहचान और टेलीमेट्री
+    जब भी कोई सोशल मीडिया पोस्ट किसी कारण से फेल होती है, हमारा टेलीमेट्री इंजन तुरंत उसका सटीक कारण बताता है:
+    - `API_CREDITS_DEPLETED`: सोशल मीडिया API का बैलेंस खाली हो गया (जैसे Twitter HTTP 402)।
+    - `AUTH_TOKEN_EXPIRED`: अकाउंट का लॉगिन टोकन एक्सपायर हो गया (दोबारा कनेक्ट करें)।
+    - `PERMISSION_DENIED`: फेसबुक या लिंक्डइन पेज पर पोस्ट करने की परमिशन नहीं है।
+    - `RATE_LIMIT_EXCEEDED`: दिन की पोस्टिंग लिमिट पूरी हो चुकी है।
+    - `MEDIA_PROCESSING_FAILED`: वीडियो का फॉर्मेट या साइज प्लेटफॉर्म द्वारा रिजेक्ट हुआ।
+
+    ### 🛠️ एरर देखने और Retry करने का तरीका:
+    1. **Social Studio ➔ Publishing Logs** (`/social-media/logs`) पर जाएं।
+    2. फेल हुई पोस्ट पर **Inspect** बटन दबाएं।
+    3. हिंदी व अंग्रेजी में कारण और समाधान के स्टेप्स देखें।
+    4. समस्या ठीक करके **Retry Now** बटन दबाएं — पोस्ट तुरंत दोबारा पब्लिश हो जाएगी।
+  </Tab>
+</Tabs>

@@ -5,6 +5,8 @@
     "reels-and-shorts",
     "auto-thumbnails",
     "drafts-and-scheduling",
-    "calendar-management"
+    "calendar-management",
+    "publishing-logs-telemetry",
+    "ads-managers"
   ]
 }
