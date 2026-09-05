@@ -24,13 +24,17 @@ export const baseOptions: BaseLayoutProps = {
       active: 'nested-url',
     },
     {
-      text: 'Platform App',
-      url: 'https://siegfriedoutreach.com',
-      external: true,
-    },
-    {
       text: 'MCP Integration',
       url: '/docs/developer-mcp/mcp-overview',
+    },
+    {
+      text: '📅 Book Free 1-on-1 Demo',
+      url: '/#book-demo',
+    },
+    {
+      text: 'Open App ➔',
+      url: 'https://siegfriedoutreach.com',
+      external: true,
     },
   ],
 };

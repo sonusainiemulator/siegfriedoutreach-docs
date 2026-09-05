@@ -12,8 +12,13 @@ import {
   Layers, 
   Flame,
   Globe2,
-  Video
+  Video,
+  Building2,
+  Mail,
+  ShieldCheck,
+  Phone
 } from 'lucide-react';
+import BookDemoSection from './components/BookDemoSection';
 
 export default function HomePage() {
   return (
@@ -36,7 +41,7 @@ export default function HomePage() {
               <span className="bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent font-extrabold text-lg tracking-tight">
                 Siegfried Outreach
               </span>
-              <span className="text-[10px] text-slate-400 font-medium tracking-wide uppercase">User Docs & Knowledge Portal</span>
+              <span className="text-[10px] text-slate-400 font-medium tracking-wide uppercase">User Docs &amp; Knowledge Portal</span>
             </div>
           </div>
 
@@ -51,8 +56,15 @@ export default function HomePage() {
               href="/docs/developer-mcp/mcp-overview"
               className="hidden sm:inline-flex text-sm font-medium text-slate-300 hover:text-white transition-colors"
             >
-              MCP & API
+              MCP &amp; API
             </Link>
+            <a
+              href="#book-demo"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-indigo-500/20 border border-indigo-500/40 text-indigo-300 text-xs font-semibold hover:bg-indigo-500/30 transition-all"
+            >
+              <Calendar className="w-3.5 h-3.5" />
+              Book Free Demo
+            </a>
             <a
               href="https://siegfriedoutreach.com"
               target="_blank"
@@ -70,7 +82,7 @@ export default function HomePage() {
       <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center">
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-medium mb-6">
           <Sparkles className="w-3.5 h-3.5" />
-          <span>Bilingual Step-by-Step User Guide (English & हिंदी)</span>
+          <span>Bilingual Step-by-Step User Guide (English &amp; हिंदी)</span>
         </div>
 
         <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
@@ -82,7 +94,7 @@ export default function HomePage() {
         </h1>
 
         <p className="text-lg sm:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed">
-          Learn how to generate viral YouTube Shorts & Instagram Reels, automate cross-platform scheduling across 10+ social networks, analyze real engagement metrics, and build AI agents using Siegfried MCP.
+          Learn how to generate viral YouTube Shorts &amp; Instagram Reels, automate cross-platform scheduling across 10+ social networks, analyze real engagement metrics, and build AI agents using Siegfried MCP.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4">
@@ -93,20 +105,20 @@ export default function HomePage() {
             <Play className="w-4 h-4 fill-white" />
             Start User Guide (शुरू करें)
           </Link>
-          <Link
-            href="/docs/social-media/reels-and-shorts"
-            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-200 font-semibold text-sm transition-all hover:bg-slate-800"
+          <a
+            href="#book-demo"
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900 border border-indigo-500/40 text-indigo-300 font-semibold text-sm transition-all hover:bg-slate-800"
           >
-            <Video className="w-4 h-4 text-purple-400" />
-            Shorts & Reels Tutorial
-          </Link>
+            <Calendar className="w-4 h-4 text-indigo-400" />
+            Book Free 1-on-1 Strategy Call
+          </a>
         </div>
       </section>
 
       {/* Feature Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">Feature Guides & Tutorials</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">Feature Guides &amp; Tutorials</h2>
           <p className="text-slate-400 text-sm max-w-xl mx-auto">
             Comprehensive step-by-step instructions for every tool in the Siegfried Outreach ecosystem.
           </p>
@@ -141,7 +153,7 @@ export default function HomePage() {
               <Video className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
-              YouTube Shorts & Reels (9:16)
+              YouTube Shorts &amp; Reels (9:16)
             </h3>
             <p className="text-sm text-slate-400 leading-relaxed mb-4">
               Vertical video upload, AI hook generation, auto video frame capture, viral cover selection, and cross-platform scheduling.
@@ -160,7 +172,7 @@ export default function HomePage() {
               <Flame className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-white mb-2 group-hover:text-pink-400 transition-colors">
-              AI & Video Thumbnail Studio
+              AI &amp; Video Thumbnail Studio
             </h3>
             <p className="text-sm text-slate-400 leading-relaxed mb-4">
               Extract HD frames from video in 1-click or generate eye-catching AI thumbnail art with badges and custom typography.
@@ -198,7 +210,7 @@ export default function HomePage() {
               <Bot className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">
-              AI Writer & Slide Studio
+              AI Writer &amp; Slide Studio
             </h3>
             <p className="text-sm text-slate-400 leading-relaxed mb-4">
               Generate viral hooks, emoji captions, trending hashtags, multi-slide carousel graphics, and custom AI artwork.
@@ -217,7 +229,7 @@ export default function HomePage() {
               <Code2 className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-              Siegfried MCP & Developer API
+              Siegfried MCP &amp; Developer API
             </h3>
             <p className="text-sm text-slate-400 leading-relaxed mb-4">
               Integrate 64+ Model Context Protocol tools into Cursor IDE, Claude Desktop, Antigravity, and custom automation scripts.
@@ -229,13 +241,60 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Free 1-on-1 Demo & Strategy Consultation Section */}
+      <BookDemoSection />
+
+      {/* Detailed Corporate Information & Trust Section */}
+      <section className="py-12 border-t border-slate-800/80 bg-slate-950/60 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-xs text-slate-400">
+          <div>
+            <div className="flex items-center gap-2 text-white font-bold text-sm mb-3">
+              <Building2 className="w-4 h-4 text-indigo-400" />
+              <span>Siegfried Outreach Inc.</span>
+            </div>
+            <p className="text-slate-400 leading-relaxed mb-2">
+              Next-generation enterprise outreach, omni-channel social media automation, and AI Agent MCP platform.
+            </p>
+            <p className="text-slate-500">DLF CyberCity, Gurugram / Delaware, USA</p>
+          </div>
+
+          <div>
+            <div className="text-white font-bold text-sm mb-3">Direct Support &amp; Contacts</div>
+            <ul className="space-y-1.5">
+              <li><span className="text-slate-500">Support:</span> <a href="mailto:support@siegfriedoutreach.com" className="text-indigo-400 hover:underline">support@siegfriedoutreach.com</a></li>
+              <li><span className="text-slate-500">Inquiries:</span> <a href="mailto:contact@siegfriedoutreach.com" className="text-indigo-400 hover:underline">contact@siegfriedoutreach.com</a></li>
+              <li><span className="text-slate-500">Strategy Booking:</span> <a href="#book-demo" className="text-emerald-400 hover:underline">Book 1-on-1 Meeting</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div className="text-white font-bold text-sm mb-3">Security &amp; Compliance</div>
+            <ul className="space-y-1.5">
+              <li className="flex items-center gap-1.5"><ShieldCheck className="w-3.5 h-3.5 text-emerald-400" /> FIDO2 Passkeys &amp; WebAuthn</li>
+              <li className="flex items-center gap-1.5"><ShieldCheck className="w-3.5 h-3.5 text-emerald-400" /> Meta &amp; Google Cloud Approved API</li>
+              <li className="flex items-center gap-1.5"><ShieldCheck className="w-3.5 h-3.5 text-emerald-400" /> 256-bit SSL End-to-End Encryption</li>
+            </ul>
+          </div>
+
+          <div>
+            <div className="text-white font-bold text-sm mb-3">AI Agent Integrations</div>
+            <ul className="space-y-1.5">
+              <li><a href="/llms.txt" className="text-indigo-400 hover:underline">/llms.txt (LLM Standard)</a></li>
+              <li><a href="/llm.txt" className="text-indigo-400 hover:underline">/llm.txt (AI Spec)</a></li>
+              <li><a href="/feed.xml" className="text-indigo-400 hover:underline">/feed.xml (RSS Fast Index)</a></li>
+              <li><a href="/sitemap.xml" className="text-indigo-400 hover:underline">/sitemap.xml (Google Sitemap)</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
-      <footer className="border-t border-slate-800/80 py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-        <p>© 2026 Siegfried Outreach Platform. All rights reserved.</p>
+      <footer className="border-t border-slate-800/80 py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>© 2026 Siegfried Outreach Platform (Siegfried Outreach Inc.). All rights reserved.</p>
         <div className="flex items-center gap-6">
           <Link href="/docs" className="hover:text-slate-300 transition-colors">Documentation</Link>
-          <a href="https://siegfriedoutreach.com" target="_blank" rel="noreferrer" className="hover:text-slate-300 transition-colors">App Portal</a>
-          <a href="https://github.com/fuma-nama/fumadocs" target="_blank" rel="noreferrer" className="hover:text-slate-300 transition-colors">Powered by Fumadocs</a>
+          <a href="#book-demo" className="hover:text-indigo-400 text-indigo-400 font-semibold transition-colors">Book 1-on-1 Demo</a>
+          <a href="https://siegfriedoutreach.com" target="_blank" rel="noreferrer" className="hover:text-slate-300 transition-colors">Platform App</a>
         </div>
       </footer>
     </main>
