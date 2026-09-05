@@ -20,26 +20,27 @@ export default function Analytics() {
   const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID || 'SIEGFRIED_PIXEL_ID';
 
   useEffect(() => {
-    if (pathname && window.gtag) {
+    if (pathname && typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', GA_TRACKING_ID, {
         page_path: pathname + (searchParams?.toString() ? `?${searchParams.toString()}` : ''),
       });
     }
-    if (pathname && window.fbq) {
+    if (pathname && typeof window !== 'undefined' && window.fbq) {
       window.fbq('track', 'PageView');
     }
   }, [pathname, searchParams, GA_TRACKING_ID]);
 
   return (
     <>
-      {/* Google Analytics 4 (gtag.js) */}
+      {/* Google Analytics 4 (Non-blocking Lazy Load) */}
       <Script
-        strategy="afterInteractive"
+        id="ga4-src"
+        strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
       />
       <Script
         id="google-analytics"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
@@ -53,10 +54,10 @@ export default function Analytics() {
         }}
       />
 
-      {/* Meta Pixel (Facebook Pixel) */}
+      {/* Meta Pixel (Non-blocking Lazy Load) */}
       <Script
         id="facebook-pixel"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `
             !function(f,b,e,v,n,t,s)
@@ -72,15 +73,6 @@ export default function Analytics() {
           `,
         }}
       />
-      <noscript>
-        <img
-          height="1"
-          width="1"
-          style={{ display: 'none' }}
-          src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1`}
-          alt="Meta Pixel"
-        />
-      </noscript>
     </>
   );
 }

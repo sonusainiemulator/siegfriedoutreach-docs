@@ -53,9 +53,9 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://docs.siegfriedoutreach.com',
     siteName: 'Siegfried Outreach Docs',
-    title: 'Siegfried Outreach Platform - Official User Guide & Docs',
+    title: 'Siegfried Outreach - AI Social & Campaign Docs',
     description:
-      'Master AI-driven multi-platform social media publishing, WhatsApp campaigns, Indian festival auto-pilot, and MCP agent workflows.',
+      'Official user manual and developer API guide for Siegfried Outreach Platform. Multi-Platform Social Studio, WhatsApp Broadcasts, and MCP Tools.',
     images: [
       {
         url: '/images/social-studio-composer.png',
@@ -69,9 +69,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@SiegfriedOutreach',
     creator: '@SiegfriedOutreach',
-    title: 'Siegfried Outreach Platform - Official User Guide & Docs',
+    title: 'Siegfried Outreach - AI Social & Campaign Docs',
     description:
-      'Step-by-step guides, real industry use cases, and AI MCP integration for Siegfried Outreach Platform.',
+      'Official user manual and developer API guide for Siegfried Outreach Platform. Multi-Platform Social Studio, WhatsApp Broadcasts, and MCP Tools.',
     images: ['/images/social-studio-composer.png'],
   },
   robots: {
@@ -93,6 +93,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+  // Rich Knowledge Graph Entity Schema for 100/100 AI Visibility & Google Knowledge Panel
   const websiteJsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -121,10 +122,20 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         name: 'Siegfried Outreach',
         url: 'https://siegfriedoutreach.com',
         logo: 'https://docs.siegfriedoutreach.com/images/social-studio-composer.png',
+        knowsAbout: [
+          'Social Media Automation',
+          'Model Context Protocol MCP',
+          'WhatsApp Cloud API Marketing',
+          'AI Agent Workflows',
+          'FIDO2 Passkey Authentication',
+          'Instagram Reels and YouTube Shorts Automation',
+          'D2C E-Commerce Growth'
+        ],
         sameAs: [
           'https://twitter.com/SiegfriedOutreach',
           'https://linkedin.com/company/siegfriedoutreach',
-          'https://github.com/sonusainiemulator/siegfriedoutreach-docs',
+          'https://github.com/sonusainiemulator/Siegfried_Outreach_Platform',
+          'https://github.com/sonusainiemulator/siegfriedoutreach-docs'
         ],
       },
       {
@@ -149,12 +160,22 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Preconnect to critical domains to eliminate render-blocking delay */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://connect.facebook.net" />
+
+        {/* AI Agent Standards */}
+        <link rel="alternate" type="text/plain" href="https://docs.siegfriedoutreach.com/llms.txt" title="LLM Documentation" />
+        <link rel="alternate" type="text/plain" href="https://docs.siegfriedoutreach.com/llms-full.txt" title="Full LLM Documentation" />
+        <link rel="alternate" type="application/rss+xml" href="https://docs.siegfriedoutreach.com/feed.xml" title="Siegfried Docs RSS Feed" />
+        <link rel="canonical" href="https://docs.siegfriedoutreach.com" />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
-        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Documentation" />
-        <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="Siegfried Docs RSS Feed" />
       </head>
       <body className="flex flex-col min-h-screen antialiased selection:bg-indigo-500/20 selection:text-indigo-600 relative">
         <Suspense fallback={null}>
