@@ -15,11 +15,15 @@ import {
   MessageCircle,
   Award,
   TrendingUp,
-  Briefcase
+  Briefcase,
+  Loader2,
+  Check
 } from 'lucide-react';
 
 export default function BookDemoSection() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -29,9 +33,29 @@ export default function BookDemoSection() {
     preferredTime: 'Morning (10:00 AM - 1:00 PM IST)',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setErrorMsg('');
+
+    try {
+      const res = await fetch('/api/consultation', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setErrorMsg(data.error || 'Failed to submit form. Please try again.');
+      }
+    } catch (err: any) {
+      setErrorMsg(err.message || 'Network error occurred. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -104,7 +128,7 @@ export default function BookDemoSection() {
                   <Briefcase className="w-4 h-4" />
                 </div>
                 <div className="text-xs sm:text-sm text-zinc-700 dark:text-zinc-300">
-                  <strong className="text-zinc-900 dark:text-white">Live Platform Demonstration:</strong> Social Studio, Indian Festival Autopilot, and WhatsApp Cloud broadcasts configured live.
+                  <strong className="text-zinc-900 dark:text-white">Instant WhatsApp Confirmation:</strong> Get session agenda &amp; details sent straight to your WhatsApp.
                 </div>
               </div>
 
@@ -113,7 +137,7 @@ export default function BookDemoSection() {
                   <Award className="w-4 h-4" />
                 </div>
                 <div className="text-xs sm:text-sm text-zinc-700 dark:text-zinc-300">
-                  <strong className="text-zinc-900 dark:text-white">Developer MCP &amp; Agent Setup:</strong> Connect Cursor IDE, Claude Desktop, or custom Python agents with our guidance.
+                  <strong className="text-zinc-900 dark:text-white">Developer MCP &amp; Agent Setup:</strong> Connect Cursor IDE, Claude Desktop, or custom Python agents.
                 </div>
               </div>
             </div>
@@ -126,11 +150,11 @@ export default function BookDemoSection() {
               </div>
               <div className="p-2.5 rounded-lg bg-zinc-50 dark:bg-zinc-950/60 border border-zinc-200/80 dark:border-zinc-800 text-center">
                 <div className="font-bold text-emerald-600 dark:text-emerald-400 text-sm">100% Free</div>
-                <div>No Sales Pitch</div>
+                <div>Zero Sales Pitch</div>
               </div>
               <div className="p-2.5 rounded-lg bg-zinc-50 dark:bg-zinc-950/60 border border-zinc-200/80 dark:border-zinc-800 text-center col-span-2 sm:col-span-1">
-                <div className="font-bold text-indigo-600 dark:text-indigo-400 text-sm">Direct WhatsApp</div>
-                <div>Instant Callback</div>
+                <div className="font-bold text-indigo-600 dark:text-indigo-400 text-sm">WhatsApp API</div>
+                <div>Instant Alerts</div>
               </div>
             </div>
           </div>
@@ -144,10 +168,14 @@ export default function BookDemoSection() {
                     <CheckCircle2 className="w-7 h-7" />
                   </div>
                   <h3 className="text-lg sm:text-xl font-bold text-zinc-900 dark:text-white">
-                    Strategy Session Confirmed!
+                    Strategy Session Confirmed! (व्हाट्सएप कन्फर्मेशन भेजा गया)
                   </h3>
+                  <div className="p-3.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-700 dark:text-emerald-300 text-xs flex items-center justify-center gap-2">
+                    <MessageCircle className="w-4 h-4 text-emerald-500" />
+                    <span>WhatsApp confirmation &amp; session details sent to <strong>{formData.phone}</strong>!</span>
+                  </div>
                   <p className="text-zinc-600 dark:text-zinc-400 text-xs sm:text-sm max-w-sm mx-auto leading-relaxed">
-                    Thank you, <strong className="text-zinc-900 dark:text-white">{formData.name}</strong>. Sonu Saini and our growth team will connect with you at <strong className="text-indigo-600 dark:text-indigo-400">{formData.phone || formData.email}</strong> within 15 minutes.
+                    Thank you, <strong className="text-zinc-900 dark:text-white">{formData.name}</strong>. Sonu Saini and our growth engineering team will connect with you at your chosen window.
                   </p>
                   <div className="pt-2">
                     <a
@@ -174,6 +202,12 @@ export default function BookDemoSection() {
                       VIP Access
                     </span>
                   </div>
+
+                  {errorMsg && (
+                    <div className="p-2.5 rounded-lg bg-red-500/10 border border-red-500/20 text-red-600 dark:text-red-400 text-xs">
+                      {errorMsg}
+                    </div>
+                  )}
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
@@ -268,10 +302,20 @@ export default function BookDemoSection() {
 
                   <button
                     type="submit"
-                    className="w-full py-3 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs sm:text-sm shadow-md shadow-indigo-500/20 transition-all active:scale-95 flex items-center justify-center gap-2 mt-2 cursor-pointer"
+                    disabled={loading}
+                    className="w-full py-3 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs sm:text-sm shadow-md shadow-indigo-500/20 transition-all active:scale-95 flex items-center justify-center gap-2 mt-2 cursor-pointer disabled:opacity-50"
                   >
-                    <Send className="w-4 h-4" />
-                    Book Free 1-on-1 Consultation with Sonu Saini
+                    {loading ? (
+                      <>
+                        <Loader2 className="w-4 h-4 animate-spin" />
+                        <span>Sending WhatsApp Notification...</span>
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-4 h-4" />
+                        <span>Book Free 1-on-1 Consultation with Sonu Saini</span>
+                      </>
+                    )}
                   </button>
 
                   <div className="flex flex-wrap items-center justify-center gap-3 pt-1 text-[10px] text-zinc-500 dark:text-zinc-400">
@@ -281,8 +325,8 @@ export default function BookDemoSection() {
                     <span>&bull;</span>
                     <span>No Credit Card Required</span>
                     <span>&bull;</span>
-                    <span className="text-indigo-600 dark:text-indigo-400 font-medium flex items-center gap-1">
-                      <PhoneCall className="w-3 h-3" /> Direct 1-on-1 Access
+                    <span className="text-emerald-600 dark:text-emerald-400 font-medium flex items-center gap-1">
+                      <MessageCircle className="w-3.5 h-3.5" /> Instant WhatsApp Confirmation
                     </span>
                   </div>
                 </form>
