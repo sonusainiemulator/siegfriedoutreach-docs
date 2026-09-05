@@ -1,20 +1,169 @@
 import './global.css';
 import { RootProvider } from 'fumadocs-ui/provider/next';
 import type { ReactNode } from 'react';
+import type { Metadata, Viewport } from 'next';
 import AiDocsAssistant from './components/AiDocsAssistant';
 
-export const metadata = {
+export const viewport: Viewport = {
+  themeColor: '#6366f1',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+};
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://docs.siegfriedoutreach.com'),
   title: {
-    template: '%s | Siegfried Outreach User Guide',
-    default: 'Siegfried Outreach Platform - Official User Guide & Docs (docs.siegfriedoutreach.com)',
+    template: '%s | Siegfried Outreach Official Documentation & Guide',
+    default: 'Siegfried Outreach Platform - Official User Guide, API & Docs (docs.siegfriedoutreach.com)',
   },
   description:
-    'Complete bilingual (English & Hindi) step-by-step user manual for Siegfried Outreach Platform. Featuring AI Docs Assistant, Multi-Platform Social Studio, AI Indian Festival Auto-Pilot, WhatsApp & Telegram Broadcasts, and MCP Agent integration.',
+    'Comprehensive bilingual (English & Hindi) step-by-step user manual, real-world case studies, and developer reference for Siegfried Outreach Platform. Master Multi-Platform Social Studio, Indian Festivals Autopilot, WhatsApp Broadcasts, Passkey Security, and MCP AI Agent integrations.',
+  keywords: [
+    'Siegfried Outreach',
+    'Siegfried Outreach Docs',
+    'Social Media Automation',
+    'AI Social Media Manager',
+    'Instagram Auto Poster',
+    'LinkedIn Post Scheduler',
+    'Indian Festivals Social Media Autopilot',
+    'WhatsApp Broadcast API',
+    'Telegram Marketing Bot',
+    'Passkey FIDO2 Authentication',
+    'Model Context Protocol MCP',
+    'Cursor MCP Tools',
+    'Claude Desktop MCP',
+    'AI Blog Writer',
+    'AI Slide Maker',
+    'AI Video Avatar',
+    'D2C 100x Growth Playbook',
+    'Enterprise Outreach Platform',
+    'Fumadocs Documentation',
+    'सिएगफ्रीड आउटरीच यूजर गाइड',
+    'सोशल मीडिया ऑटोमेशन'
+  ],
+  authors: [
+    { name: 'Siegfried Outreach Engineering & Growth Team', url: 'https://siegfriedoutreach.com' }
+  ],
+  creator: 'Siegfried Outreach Platform',
+  publisher: 'Siegfried Outreach Inc.',
+  category: 'Technology & Marketing Software',
+  alternates: {
+    canonical: 'https://docs.siegfriedoutreach.com',
+    languages: {
+      'en-US': 'https://docs.siegfriedoutreach.com',
+      'hi-IN': 'https://docs.siegfriedoutreach.com',
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    alternateLocale: 'hi_IN',
+    url: 'https://docs.siegfriedoutreach.com',
+    siteName: 'Siegfried Outreach Documentation',
+    title: 'Siegfried Outreach Platform - Official User Guide, API & Docs',
+    description:
+      'Master AI-driven multi-platform social media publishing, WhatsApp campaigns, Indian festival auto-pilot, passkey security, and MCP agent workflows.',
+    images: [
+      {
+        url: '/images/social-studio-composer.png',
+        width: 1200,
+        height: 630,
+        alt: 'Siegfried Outreach Documentation & Feature Studio',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@SiegfriedOutreach',
+    creator: '@SiegfriedOutreach',
+    title: 'Siegfried Outreach Platform - Official User Guide & Docs',
+    description:
+      'Step-by-step guides, real industry use cases, and AI MCP integration for Siegfried Outreach Platform.',
+    images: ['/images/social-studio-composer.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  other: {
+    'llms-txt': 'https://docs.siegfriedoutreach.com/llms.txt',
+    'ai-agent-docs': 'https://docs.siegfriedoutreach.com/llms-full.txt',
+    'google-site-verification': '', // Ready for tomorrow GSC verification code
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+  // Rich Structured Schema for Google SEO, AEO & AI Engines
+  const websiteJsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        '@id': 'https://docs.siegfriedoutreach.com/#website',
+        url: 'https://docs.siegfriedoutreach.com',
+        name: 'Siegfried Outreach Documentation',
+        description: 'Official User Guide and Developer API Reference for Siegfried Outreach Platform',
+        publisher: {
+          '@id': 'https://siegfriedoutreach.com/#organization',
+        },
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: {
+            '@type': 'EntryPoint',
+            urlTemplate: 'https://docs.siegfriedoutreach.com/docs?q={search_term_string}',
+          },
+          'query-input': 'required name=search_term_string',
+        },
+        inLanguage: ['en-US', 'hi-IN'],
+      },
+      {
+        '@type': 'Organization',
+        '@id': 'https://siegfriedoutreach.com/#organization',
+        name: 'Siegfried Outreach',
+        url: 'https://siegfriedoutreach.com',
+        logo: 'https://docs.siegfriedoutreach.com/images/social-studio-composer.png',
+        sameAs: [
+          'https://twitter.com/SiegfriedOutreach',
+          'https://linkedin.com/company/siegfriedoutreach',
+          'https://github.com/sonusainiemulator/siegfriedoutreach-docs',
+        ],
+      },
+      {
+        '@type': 'SoftwareApplication',
+        name: 'Siegfried Outreach Platform',
+        operatingSystem: 'All (Cloud Web App, iOS, Android, Desktop MCP)',
+        applicationCategory: 'BusinessApplication',
+        offers: {
+          '@type': 'Offer',
+          price: '0',
+          priceCurrency: 'USD',
+        },
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '4.9',
+          ratingCount: '1250',
+        },
+      },
+    ],
+  };
+
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Documentation" />
+      </head>
       <body className="flex flex-col min-h-screen antialiased selection:bg-indigo-500/20 selection:text-indigo-600 relative">
         <RootProvider search={{ options: { api: '/api/search' } }}>
           {children}

@@ -1,0 +1,3 @@
+# Siegfried Outreach Platform Documentation (LLMs.txt)
+> https://docs.siegfriedoutreach.com/llms.txt
+> Official documentation for Siegfried Outreach Platform - AI Social Studio, Campaign Hub, AI Studio, and MCP Tools.
