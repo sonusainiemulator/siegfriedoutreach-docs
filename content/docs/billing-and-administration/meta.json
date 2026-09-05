@@ -1,0 +1,10 @@
+{
+  "title": "Billing & Administration",
+  "pages": [
+    "payment-gateways",
+    "plans-and-tiers",
+    "transactions-invoicing",
+    "multilingual-localization",
+    "cms-web-pages"
+  ]
+}

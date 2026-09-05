@@ -1,0 +1,50 @@
+---
+title: Multi-Gateway Payment Setup
+description: Configure Stripe, Razorpay, Bank UPI, and international payment gateways with automated invoice generation.
+---
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+
+## 💳 Payment Gateway Setup
+
+Configure payment acceptance for credits, subscriptions, and customer checkouts under **Payment Setup** (`/payment-setup`).
+
+<Tabs items={['English Guide', 'हिंदी गाइड']}>
+  <Tab value="English Guide">
+    ### ⚡ Supported Gateways
+    - **Razorpay**: Native UPI, Netbanking, Cards, and Wallets for Indian domestic transactions.
+    - **Stripe**: Global card payments, Apple Pay, Google Pay, and SEPA debits.
+    - **Bank Transfer & UPI**: Direct account transfers with automated UTR confirmation.
+  </Tab>
+
+  <Tab value="हिंदी गाइड">
+    ### ⚡ सपोर्टेड पेमेंट गेटवे
+    - **रेज़रपे (Razorpay)**: UPI (Google Pay, PhonePe, Paytm), नेटबैंकिंग और क्रेडिट/डेबिट कार्ड्स।
+    - **स्ट्राइप (Stripe)**: इंटरनेशनल कार्ड्स और ग्लोबल पेमेंट्स।
+    - **डायरेक्ट बैंक और UPI ट्रांसफर**: सीधे बैंक खाते में भुगतान प्राप्त करना।
+  </Tab>
+</Tabs>
+
+---
+
+## 🏢 Real-World Industry Use Cases (वास्तविक उद्योग उपयोग)
+
+<Tabs items={['English Examples', 'हिंदी उदाहरण']}>
+  <Tab value="English Examples">
+    ### 🌐 1. Global SaaS Agency (Dual Currency Billing)
+    - **Scenario**: Accepting ₹ INR payments from Indian clients via Razorpay UPI and $ USD from US clients via Stripe.
+  </Tab>
+
+  <Tab value="हिंदी उदाहरण">
+    ### 🌐 1. ग्लोबल एजेंसी (₹ और $ दोनों में पेमेंट)
+    - **उदाहरण**: भारत के क्लाइंट्स से UPI से और विदेशी क्लाइंट्स से डॉलर में पेमेंट लेना।
+  </Tab>
+</Tabs>
+
+---
+
+## 🏷️ Related Feature Keywords & Search Tags (संबंधित कीवर्ड्स और टैग्स)
+
+<div className="flex flex-wrap gap-2 pt-2">
+  `#PaymentGateways` `#RazorpayUPI` `#StripePayments` `#InternationalCheckout` `#InstantTopUp`
+</div>

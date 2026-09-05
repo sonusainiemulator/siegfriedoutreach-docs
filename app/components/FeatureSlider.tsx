@@ -19,7 +19,11 @@ import {
   Sparkles,
   SlidersHorizontal,
   Flame,
-  Layers
+  Layers,
+  Megaphone,
+  CreditCard,
+  Building2,
+  Users
 } from 'lucide-react';
 
 const FEATURES = [
@@ -28,6 +32,16 @@ const FEATURES = [
     "title": "AI Planner & Approval Center",
     "description": "AI Planner & Approval Center - Step-by-step user manual, real-world practical use cases, and automation workflows for Siegfried Outreach Platform.",
     "url": "/docs/ai-social-manager/ai-planner-and-approval",
+    "category": "AI Social Manager",
+    "categoryFolder": "ai-social-manager",
+    "iconName": "Calendar",
+    "badgeColor": "amber"
+  },
+  {
+    "id": "ai-social-manager/ai-social-team",
+    "title": "AI Autonomous Team Personas",
+    "description": "Deploy dedicated AI agent personas including AI Copywriter, AI Art Director, AI Community Manager, and AI Analytics Specialist.",
+    "url": "/docs/ai-social-manager/ai-social-team",
     "category": "AI Social Manager",
     "categoryFolder": "ai-social-manager",
     "iconName": "Calendar",
@@ -48,6 +62,16 @@ const FEATURES = [
     "title": "🇮🇳 Indian Festivals Auto-Pilot",
     "description": "🇮🇳 Indian Festivals Auto-Pilot - Step-by-step user manual, real-world practical use cases, and automation workflows for Siegfried Outreach Platform.",
     "url": "/docs/ai-social-manager/indian-festivals-autopilot",
+    "category": "AI Social Manager",
+    "categoryFolder": "ai-social-manager",
+    "iconName": "Calendar",
+    "badgeColor": "amber"
+  },
+  {
+    "id": "ai-social-manager/reference-brain",
+    "title": "Brand Reference Brain & Knowledge Base",
+    "description": "Store brand voice guidelines, product catalogs, competitor benchmarks, and design assets to guide all AI generation.",
+    "url": "/docs/ai-social-manager/reference-brain",
     "category": "AI Social Manager",
     "categoryFolder": "ai-social-manager",
     "iconName": "Calendar",
@@ -264,6 +288,56 @@ const FEATURES = [
     "badgeColor": "emerald"
   },
   {
+    "id": "billing-and-administration/cms-web-pages",
+    "title": "Web Pages & Policy Document CMS",
+    "description": "Build and publish custom landing pages, Terms of Service, Privacy Policies, and help articles from the built-in CMS.",
+    "url": "/docs/billing-and-administration/cms-web-pages",
+    "category": "Billing & Admin",
+    "categoryFolder": "billing-and-administration",
+    "iconName": "CreditCard",
+    "badgeColor": "teal"
+  },
+  {
+    "id": "billing-and-administration/multilingual-localization",
+    "title": "Multi-Language Engine & 25+ Locales",
+    "description": "Configure platform languages, system translations, and regional locale preferences across 25+ languages.",
+    "url": "/docs/billing-and-administration/multilingual-localization",
+    "category": "Billing & Admin",
+    "categoryFolder": "billing-and-administration",
+    "iconName": "CreditCard",
+    "badgeColor": "teal"
+  },
+  {
+    "id": "billing-and-administration/payment-gateways",
+    "title": "Multi-Gateway Payment Setup",
+    "description": "Configure Stripe, Razorpay, Bank UPI, and international payment gateways with automated invoice generation.",
+    "url": "/docs/billing-and-administration/payment-gateways",
+    "category": "Billing & Admin",
+    "categoryFolder": "billing-and-administration",
+    "iconName": "CreditCard",
+    "badgeColor": "teal"
+  },
+  {
+    "id": "billing-and-administration/plans-and-tiers",
+    "title": "Plan Quotas, Limits & Custom Credits",
+    "description": "Manage subscription plans, member seat limits, AI generation credits, and workspace bandwidth quotas.",
+    "url": "/docs/billing-and-administration/plans-and-tiers",
+    "category": "Billing & Admin",
+    "categoryFolder": "billing-and-administration",
+    "iconName": "CreditCard",
+    "badgeColor": "teal"
+  },
+  {
+    "id": "billing-and-administration/transactions-invoicing",
+    "title": "Billing History, Invoices & Subscriptions",
+    "description": "Track billing history, download tax-compliant PDF invoices, and monitor credit ledger balances in real-time.",
+    "url": "/docs/billing-and-administration/transactions-invoicing",
+    "category": "Billing & Admin",
+    "categoryFolder": "billing-and-administration",
+    "iconName": "CreditCard",
+    "badgeColor": "teal"
+  },
+  {
     "id": "campaign-hub/broadcasts-and-messaging",
     "title": "Omnichannel Broadcasts",
     "description": "Omnichannel Broadcasts - Step-by-step user manual, real-world practical use cases, and automation workflows for Siegfried Outreach Platform.",
@@ -362,6 +436,66 @@ const FEATURES = [
     "categoryFolder": "getting-started",
     "iconName": "Zap",
     "badgeColor": "indigo"
+  },
+  {
+    "id": "sales-and-advertising/audience-segmentation",
+    "title": "Custom Audience Builder & Segments",
+    "description": "Segment contacts and subscriber lists by RFM scores, channel engagement, purchase history, and demographic criteria.",
+    "url": "/docs/sales-and-advertising/audience-segmentation",
+    "category": "Sales & Ads",
+    "categoryFolder": "sales-and-advertising",
+    "iconName": "Megaphone",
+    "badgeColor": "pink"
+  },
+  {
+    "id": "sales-and-advertising/google-ads-studio",
+    "title": "Google Ads & Search Marketing Studio",
+    "description": "Launch high-intent Google Search and Display campaigns with AI keyword suggestions, responsive ads, and Google Tag tracking.",
+    "url": "/docs/sales-and-advertising/google-ads-studio",
+    "category": "Sales & Ads",
+    "categoryFolder": "sales-and-advertising",
+    "iconName": "Megaphone",
+    "badgeColor": "pink"
+  },
+  {
+    "id": "sales-and-advertising/lead-inquiries",
+    "title": "Inbound Lead Capture & Inquiries Manager",
+    "description": "Capture, organize, and assign inbound customer inquiries and contact requests from landing pages with automated routing.",
+    "url": "/docs/sales-and-advertising/lead-inquiries",
+    "category": "Sales & Ads",
+    "categoryFolder": "sales-and-advertising",
+    "iconName": "Megaphone",
+    "badgeColor": "pink"
+  },
+  {
+    "id": "sales-and-advertising/meta-ads-studio",
+    "title": "Meta Ads Studio & Pixel Setup",
+    "description": "Create, launch, and optimize Facebook and Instagram ad campaigns with AI copy generation, audience targeting, and Pixel tracking.",
+    "url": "/docs/sales-and-advertising/meta-ads-studio",
+    "category": "Sales & Ads",
+    "categoryFolder": "sales-and-advertising",
+    "iconName": "Megaphone",
+    "badgeColor": "pink"
+  },
+  {
+    "id": "sales-and-advertising/reddit-ads-studio",
+    "title": "Reddit Ads & Community Targeting",
+    "description": "Reach highly engaged niche communities and subreddits with native conversation ads and Reddit Pixel conversion tracking.",
+    "url": "/docs/sales-and-advertising/reddit-ads-studio",
+    "category": "Sales & Ads",
+    "categoryFolder": "sales-and-advertising",
+    "iconName": "Megaphone",
+    "badgeColor": "pink"
+  },
+  {
+    "id": "sales-and-advertising/tiktok-ads-studio",
+    "title": "TikTok Ads & Viral Spark Studio",
+    "description": "Create viral vertical video ads on TikTok with AI hook generation, demographic audience targeting, and TikTok Pixel setup.",
+    "url": "/docs/sales-and-advertising/tiktok-ads-studio",
+    "category": "Sales & Ads",
+    "categoryFolder": "sales-and-advertising",
+    "iconName": "Megaphone",
+    "badgeColor": "pink"
   },
   {
     "id": "security-and-members/passkeys-and-biometrics",
@@ -486,19 +620,21 @@ const FEATURES = [
 ];
 
 const CATEGORIES = [
-  'All (46)',
+  'All (59)',
+  'Sales & Ads',
   'Social Studio',
   'AI Social Manager',
-  'AI Studio Tools',
   'Campaign Hub',
+  'AI Studio Tools',
   'Developer & MCP',
+  'Billing & Admin',
   'Security & Auth',
   'Growth Playbooks',
   'Analytics'
 ];
 
 export default function FeatureSlider() {
-  const [activeCategory, setActiveCategory] = useState('All (46)');
+  const [activeCategory, setActiveCategory] = useState('All (59)');
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 6; // 3x2 grid per slide
@@ -506,7 +642,7 @@ export default function FeatureSlider() {
   const filteredFeatures = useMemo(() => {
     return FEATURES.filter((feat) => {
       const matchCat =
-        activeCategory === 'All (46)' || feat.category === activeCategory;
+        activeCategory === 'All (59)' || feat.category === activeCategory;
       const matchQuery =
         searchQuery === '' ||
         feat.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -537,11 +673,13 @@ export default function FeatureSlider() {
 
   const getIcon = (cat: string) => {
     switch (cat) {
+      case 'Sales & Ads': return <Megaphone className="w-5 h-5 text-pink-500" />;
       case 'Social Studio': return <Share2 className="w-5 h-5 text-blue-500" />;
       case 'AI Social Manager': return <Calendar className="w-5 h-5 text-amber-500" />;
-      case 'AI Studio Tools': return <Bot className="w-5 h-5 text-purple-500" />;
       case 'Campaign Hub': return <MessageSquare className="w-5 h-5 text-emerald-500" />;
+      case 'AI Studio Tools': return <Bot className="w-5 h-5 text-purple-500" />;
       case 'Developer & MCP': return <Code2 className="w-5 h-5 text-cyan-500" />;
+      case 'Billing & Admin': return <CreditCard className="w-5 h-5 text-teal-500" />;
       case 'Security & Auth': return <ShieldCheck className="w-5 h-5 text-teal-500" />;
       case 'Growth Playbooks': return <Zap className="w-5 h-5 text-indigo-500" />;
       case 'Analytics': return <BarChart3 className="w-5 h-5 text-emerald-500" />;
@@ -556,13 +694,13 @@ export default function FeatureSlider() {
         <div>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-200/80 dark:border-indigo-500/20 text-indigo-700 dark:text-indigo-400 text-xs font-semibold mb-2">
             <Layers className="w-3.5 h-3.5" />
-            <span>Interactive Feature Matrix (46 Total Features)</span>
+            <span>Complete Feature Catalog (59 Total Capabilities)</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-900 dark:text-white">
-            Explore All 46 Siegfried Platform Capabilities
+            Explore All 59 Platform &amp; Marketing Features
           </h2>
           <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 mt-1">
-            Browse through all chapters or use category filter and search to jump straight into any guide.
+            Browse by category or use instant search to jump directly to any sales, marketing, ads, or AI workflow guide.
           </p>
         </div>
 
@@ -572,7 +710,7 @@ export default function FeatureSlider() {
             <Search className="w-4 h-4 text-zinc-400 absolute left-3 top-1/2 -translate-y-1/2" />
             <input
               type="text"
-              placeholder="Search 46 features..."
+              placeholder="Search 59 features..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="pl-9 pr-3 py-1.5 rounded-lg bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-xs text-zinc-900 dark:text-white placeholder-zinc-400 focus:outline-none focus:border-indigo-600 dark:focus:border-indigo-500 w-44 sm:w-60 transition-colors"
@@ -628,7 +766,7 @@ export default function FeatureSlider() {
           <button
             onClick={() => {
               setSearchQuery('');
-              setActiveCategory('All (46)');
+              setActiveCategory('All (59)');
             }}
             className="mt-3 text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:underline"
           >
