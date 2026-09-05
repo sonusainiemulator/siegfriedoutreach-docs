@@ -45,3 +45,30 @@ The **Publishing Logs & Telemetry Dashboard** (`/social-media/logs`) gives total
     4. समस्या ठीक करके **Retry Now** बटन दबाएं — पोस्ट तुरंत दोबारा पब्लिश हो जाएगी।
   </Tab>
 </Tabs>
+
+
+---
+
+## 🏢 Real-World Industry Use Cases & Practical Examples (वास्तविक उद्योग उपयोग और उदाहरण)
+
+<Tabs items={['English Examples', 'हिंदी उदाहरण']}>
+  <Tab value="English Examples">
+    ### 🏢 1. Digital Marketing Agency Managing 30 Client Accounts
+    - **Problem**: An agency manages 30 Twitter/X accounts. Suddenly, posts for 4 clients start failing during a flash product launch.
+    - **How Telemetry Solves It**:
+      1. The account manager opens **Publishing Logs** (`/social-media/logs`).
+      2. The system immediately flags **Status: HTTP 402 - Credits Depleted** under the `API_CREDITS_DEPLETED` bucket with the explanation: *"Twitter API developer credit balance is empty"*.
+      3. The agency tops up the X Developer wallet, returns to the logs dashboard, and clicks **1-Click Retry**.
+      4. All 4 failed posts are instantly published within 60 seconds without missing the client launch deadline.
+
+    ### ⚡ 2. High-Growth SaaS Product Launch
+    - **Scenario**: A startup schedules 50 announcements on LinkedIn, YouTube, and Facebook.
+    - **Outcome**: The team monitors the real-time **Latency Gauge (e.g. 420ms)** and **System Health Badge** ensuring all multi-network webhooks succeed with 100% verification.
+  </Tab>
+
+  <Tab value="हिंदी उदाहरण">
+    ### 🏢 1. डिजिटल मार्केटिंग एजेंसी (30 क्लाइंट्स के अकाउंट्स)
+    - **समस्या**: अचानक किसी क्लाइंट की ट्विटर पोस्ट फेल हो जाती है।
+    - **टेलीमेट्री समाधान**: एजेंसी **Publishing Logs** (`/social-media/logs`) पर जाकर **Inspect** दबाती है। स्क्रीन पर साफ हिंदी में लिखकर आता है कि *ट्विटर API का बैलेंस खत्म हो गया है (HTTP 402)*। बैलेंस रिचार्ज करते ही **Retry Now** दबाने पर पोस्ट तुरंत पब्लिश हो जाती है।
+  </Tab>
+</Tabs>
