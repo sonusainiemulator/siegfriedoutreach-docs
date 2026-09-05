@@ -17,7 +17,12 @@ import {
   TrendingUp,
   Briefcase,
   Loader2,
-  Check
+  Check,
+  MapPin,
+  BadgeCheck,
+  Target,
+  Flame,
+  Zap
 } from 'lucide-react';
 
 export default function BookDemoSection() {
@@ -67,7 +72,7 @@ export default function BookDemoSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center relative z-10">
           
-          {/* Left Column: Founder Photo & Profile Credentials */}
+          {/* Left Column: Founder Photo, Company Info & Trust Badges */}
           <div className="lg:col-span-6 space-y-6">
             
             {/* Header Badge */}
@@ -76,13 +81,13 @@ export default function BookDemoSection() {
               <span>Direct Founder Consultation &bull; 100% Free 1-on-1 Call</span>
             </div>
 
-            {/* Founder Card with High-Res Photo */}
-            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 p-5 rounded-2xl bg-zinc-50/80 dark:bg-zinc-950/70 border border-zinc-200/80 dark:border-zinc-800">
+            {/* Founder Card with High-Res Photo & Company Details */}
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 p-5 rounded-2xl bg-zinc-50/90 dark:bg-zinc-950/70 border border-zinc-200/80 dark:border-zinc-800">
               <div className="relative shrink-0">
                 <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden ring-3 ring-indigo-500/30 shadow-lg relative">
                   <Image
                     src="/images/sonu-saini-founder.jpg"
-                    alt="Sonu Saini - Founder & Chief Architect, Siegfried Outreach"
+                    alt="Trilochan Triphaty - Founder & Managing Director, TT INFOTECHS PVT LTD"
                     width={112}
                     height={112}
                     className="w-full h-full object-cover object-top"
@@ -97,18 +102,58 @@ export default function BookDemoSection() {
               <div className="space-y-1.5 text-center sm:text-left">
                 <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
                   <h3 className="text-lg font-bold text-zinc-900 dark:text-white">
-                    Sonu Saini
+                    Trilochan Triphaty
                   </h3>
                   <span className="text-[10px] uppercase font-bold px-2 py-0.5 rounded-md bg-indigo-100 dark:bg-indigo-500/20 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-500/30">
-                    Founder &amp; Chief Architect
+                    Founder &amp; MD
                   </span>
                 </div>
-                <p className="text-xs text-zinc-500 dark:text-zinc-400">
-                  Siegfried Outreach Platform &bull; Growth &amp; AI Engineering
+                <p className="text-xs font-semibold text-zinc-700 dark:text-zinc-300 flex items-center justify-center sm:justify-start gap-1">
+                  <Building2 className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400 shrink-0" />
+                  <span>TT INFOTECHS PVT LTD</span>
                 </p>
-                <p className="text-xs text-zinc-700 dark:text-zinc-300 leading-relaxed pt-1">
-                  &ldquo;I personally invite you to a 15-minute 1-on-1 strategy session. We will break down your sales bottlenecks and architect an automated outreach engine for 100x scale.&rdquo;
+                <p className="text-[11px] text-zinc-500 dark:text-zinc-400">
+                  Software &amp; IT Company in Bhubaneswar, Odisha
                 </p>
+                <p className="text-xs text-zinc-700 dark:text-zinc-300 leading-relaxed pt-1 italic">
+                  &ldquo;I personally invite you to a 15-minute 1-on-1 strategy session. We will audit your sales bottlenecks and build an automated outreach engine for 100x scale.&rdquo;
+                </p>
+              </div>
+            </div>
+
+            {/* Official Authority & Trust Badges: Govt Approved, Meta Partner, Sales Experts */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+              {/* Govt Approved Badge */}
+              <div className="p-3 rounded-xl bg-gradient-to-br from-amber-500/10 via-orange-500/5 to-transparent border border-amber-500/30 flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-600 dark:text-amber-400 shrink-0">
+                  <BadgeCheck className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="text-[11px] font-bold text-zinc-900 dark:text-white leading-tight">Govt Approved</div>
+                  <div className="text-[10px] text-zinc-500 dark:text-zinc-400">MCA &amp; MSME Registered</div>
+                </div>
+              </div>
+
+              {/* Official Meta Partner Badge */}
+              <div className="p-3 rounded-xl bg-gradient-to-br from-blue-500/10 via-indigo-500/5 to-transparent border border-blue-500/30 flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-600 dark:text-blue-400 shrink-0">
+                  <Zap className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="text-[11px] font-bold text-zinc-900 dark:text-white leading-tight">Meta Partner</div>
+                  <div className="text-[10px] text-zinc-500 dark:text-zinc-400">Official Cloud API</div>
+                </div>
+              </div>
+
+              {/* Sales Expert Badge */}
+              <div className="p-3 rounded-xl bg-gradient-to-br from-emerald-500/10 via-teal-500/5 to-transparent border border-emerald-500/30 flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0">
+                  <Flame className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="text-[11px] font-bold text-zinc-900 dark:text-white leading-tight">Sales Experts</div>
+                  <div className="text-[10px] text-zinc-500 dark:text-zinc-400">100x Growth Leaders</div>
+                </div>
               </div>
             </div>
 
@@ -119,16 +164,16 @@ export default function BookDemoSection() {
                   <TrendingUp className="w-4 h-4" />
                 </div>
                 <div className="text-xs sm:text-sm text-zinc-700 dark:text-zinc-300">
-                  <strong className="text-zinc-900 dark:text-white">Custom 100x Growth Blueprint:</strong> Direct review of your D2C brand, agency clients, or B2B sales pipeline.
+                  <strong className="text-zinc-900 dark:text-white">Custom 100x Growth Blueprint:</strong> Direct architecture review for your D2C brand, agency clients, or B2B sales pipeline.
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
                 <div className="p-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5">
-                  <Briefcase className="w-4 h-4" />
+                  <MessageCircle className="w-4 h-4" />
                 </div>
                 <div className="text-xs sm:text-sm text-zinc-700 dark:text-zinc-300">
-                  <strong className="text-zinc-900 dark:text-white">Instant WhatsApp Confirmation:</strong> Get session agenda &amp; details sent straight to your WhatsApp.
+                  <strong className="text-zinc-900 dark:text-white">Instant WhatsApp Confirmation:</strong> Real-time session confirmation sent directly via Zender WhatsApp Gateway.
                 </div>
               </div>
 
@@ -137,24 +182,25 @@ export default function BookDemoSection() {
                   <Award className="w-4 h-4" />
                 </div>
                 <div className="text-xs sm:text-sm text-zinc-700 dark:text-zinc-300">
-                  <strong className="text-zinc-900 dark:text-white">Developer MCP &amp; Agent Setup:</strong> Connect Cursor IDE, Claude Desktop, or custom Python agents.
+                  <strong className="text-zinc-900 dark:text-white">Corporate Headquarter:</strong> Santoshi Vihar, Laxmisagar, Bhubaneswar, Odisha 751006, India.
                 </div>
               </div>
             </div>
 
-            {/* Quick Trust Highlights */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-[11px] text-zinc-500 dark:text-zinc-400">
-              <div className="p-2.5 rounded-lg bg-zinc-50 dark:bg-zinc-950/60 border border-zinc-200/80 dark:border-zinc-800 text-center">
-                <div className="font-bold text-zinc-900 dark:text-white text-sm">15 Mins</div>
-                <div>Pure Strategy Call</div>
-              </div>
-              <div className="p-2.5 rounded-lg bg-zinc-50 dark:bg-zinc-950/60 border border-zinc-200/80 dark:border-zinc-800 text-center">
-                <div className="font-bold text-emerald-600 dark:text-emerald-400 text-sm">100% Free</div>
-                <div>Zero Sales Pitch</div>
-              </div>
-              <div className="p-2.5 rounded-lg bg-zinc-50 dark:bg-zinc-950/60 border border-zinc-200/80 dark:border-zinc-800 text-center col-span-2 sm:col-span-1">
-                <div className="font-bold text-indigo-600 dark:text-indigo-400 text-sm">WhatsApp API</div>
-                <div>Instant Alerts</div>
+            {/* Direct Contact & WhatsApp Links */}
+            <div className="flex flex-wrap items-center gap-3 pt-1">
+              <a 
+                href="https://wa.me/919321319079?text=Hi%20Trilochan,%20I%20want%20to%20book%20a%201-on-1%20strategy%20session%20for%20Siegfried%20Outreach."
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold shadow-xs transition-colors"
+              >
+                <MessageCircle className="w-3.5 h-3.5" />
+                <span>WhatsApp: +91 93213 19079</span>
+              </a>
+              <div className="flex items-center gap-1.5 text-xs text-zinc-500 dark:text-zinc-400">
+                <MapPin className="w-3.5 h-3.5 text-indigo-500" />
+                <span>Bhubaneswar, Odisha</span>
               </div>
             </div>
           </div>
@@ -175,7 +221,7 @@ export default function BookDemoSection() {
                     <span>WhatsApp confirmation &amp; session details sent to <strong>{formData.phone}</strong>!</span>
                   </div>
                   <p className="text-zinc-600 dark:text-zinc-400 text-xs sm:text-sm max-w-sm mx-auto leading-relaxed">
-                    Thank you, <strong className="text-zinc-900 dark:text-white">{formData.name}</strong>. Sonu Saini and our growth engineering team will connect with you at your chosen window.
+                    Thank you, <strong className="text-zinc-900 dark:text-white">{formData.name}</strong>. Trilochan Triphaty and our growth strategy team at TT INFOTECHS PVT LTD will connect with you at your chosen window.
                   </p>
                   <div className="pt-2">
                     <a
@@ -195,7 +241,7 @@ export default function BookDemoSection() {
                         Book Free 1-on-1 Growth Consultation
                       </h3>
                       <p className="text-[11px] text-zinc-500 dark:text-zinc-400">
-                        Select your preferred slot with Founder Sonu Saini
+                        Session with Founder Trilochan Triphaty (TT INFOTECHS)
                       </p>
                     </div>
                     <span className="text-[10px] px-2.5 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-semibold border border-emerald-200 dark:border-emerald-500/20 shrink-0">
@@ -246,7 +292,7 @@ export default function BookDemoSection() {
                       <input
                         type="tel"
                         required
-                        placeholder="+91 98765 43210"
+                        placeholder="+91 93213 19079"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full px-3 py-2 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-750 rounded-lg text-xs text-zinc-900 dark:text-white placeholder-zinc-400 focus:outline-none focus:border-indigo-600 dark:focus:border-indigo-500 transition-colors"
@@ -313,7 +359,7 @@ export default function BookDemoSection() {
                     ) : (
                       <>
                         <Send className="w-4 h-4" />
-                        <span>Book Free 1-on-1 Consultation with Sonu Saini</span>
+                        <span>Book Free 1-on-1 Consultation with Trilochan Triphaty</span>
                       </>
                     )}
                   </button>

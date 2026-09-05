@@ -153,12 +153,13 @@ export default function HomePage() {
           <div>
             <div className="flex items-center gap-2 text-zinc-900 dark:text-white font-bold text-sm mb-3">
               <Building2 className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
-              <span>Siegfried Outreach Inc.</span>
+              <span>TT INFOTECHS PVT LTD</span>
             </div>
             <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-2">
-              Next-generation enterprise outreach, omni-channel social media automation, and AI Agent MCP platform.
+              Leading Software &amp; IT Company in Bhubaneswar &bull; Next-Gen Siegfried Outreach Platform, Omni-Channel Automation &amp; AI MCP Studio.
             </p>
-            <p className="text-zinc-400 dark:text-zinc-500">DLF CyberCity, Gurugram / Delaware, USA</p>
+            <p className="text-zinc-700 dark:text-zinc-300 font-medium">Santoshi Vihar, Laxmisagar, Bhubaneswar, Odisha 751006, India</p>
+            <p className="text-emerald-600 dark:text-emerald-400 font-semibold pt-1">WhatsApp: +91 93213 19079</p>
           </div>
 
           <div>
@@ -171,11 +172,12 @@ export default function HomePage() {
           </div>
 
           <div>
-            <div className="text-zinc-900 dark:text-white font-bold text-sm mb-3">Compliance &amp; Trust</div>
+            <div className="text-zinc-900 dark:text-white font-bold text-sm mb-3">Certifications &amp; Partners</div>
             <ul className="space-y-1.5">
-              <li className="flex items-center gap-1.5"><ShieldCheck className="w-3.5 h-3.5 text-emerald-500" /> FIDO2 Passkeys &amp; WebAuthn</li>
-              <li className="flex items-center gap-1.5"><ShieldCheck className="w-3.5 h-3.5 text-emerald-500" /> Meta Cloud &amp; Google Cloud Approved API</li>
-              <li className="flex items-center gap-1.5"><ShieldCheck className="w-3.5 h-3.5 text-emerald-500" /> 256-bit SSL End-to-End Encryption</li>
+              <li className="flex items-center gap-1.5"><ShieldCheck className="w-3.5 h-3.5 text-amber-500" /> <strong>Govt Approved</strong> (MCA &amp; MSME Registered)</li>
+              <li className="flex items-center gap-1.5"><ShieldCheck className="w-3.5 h-3.5 text-blue-500" /> <strong>Official Meta Partner</strong> (Cloud API)</li>
+              <li className="flex items-center gap-1.5"><ShieldCheck className="w-3.5 h-3.5 text-emerald-500" /> <strong>Certified Sales Experts</strong> (100x Growth)</li>
+              <li className="flex items-center gap-1.5"><ShieldCheck className="w-3.5 h-3.5 text-purple-500" /> 256-bit SSL End-to-End Encryption</li>
             </ul>
           </div>
 

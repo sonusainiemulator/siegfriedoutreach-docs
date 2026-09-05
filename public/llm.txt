@@ -1,6 +1,14 @@
-# Siegfried Outreach Platform - LLM Reference Guide
-- Company: Siegfried Outreach (https://siegfriedoutreach.com)
-- Docs: https://docs.siegfriedoutreach.com
-- Free 1-on-1 Demo: https://docs.siegfriedoutreach.com/#book-demo
-- Support: support@siegfriedoutreach.com
-- Full LLMs specification: https://docs.siegfriedoutreach.com/llms.txt
+# TT INFOTECHS PVT LTD — Siegfried Outreach Platform
+
+> Enterprise AI-Powered Multi-Channel Outreach, Social Studio & MCP Ecosystem
+> Official Meta Partner | Govt Approved (MCA & MSME Registered) | Certified Sales Experts
+
+- **Founder & MD**: Trilochan Triphaty
+- **Company**: TT INFOTECHS PVT LTD – Software & IT Company in Bhubaneswar
+- **Address**: Santoshi Vihar, Laxmisagar, Bhubaneswar, Odisha 751006, India
+- **WhatsApp / Phone**: +91 93213 19079
+- **Platform Console**: https://siegfriedoutreach.com
+- **Documentation**: https://docs.siegfriedoutreach.com
+- **1-on-1 Consultation**: https://docs.siegfriedoutreach.com/#book-demo
+- **API Spec**: https://docs.siegfriedoutreach.com/openapi.json
+- **Full LLM Docs**: https://docs.siegfriedoutreach.com/llms-full.txt

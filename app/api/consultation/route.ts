@@ -51,7 +51,7 @@ export async function POST(req: Request) {
 
 Dear *${name}*,
 
-Thank you for requesting a 1-on-1 Business Growth Consultation with *Sonu Saini* (Founder & Chief Architect).
+Thank you for requesting a 1-on-1 Business Growth Consultation with *Trilochan Triphaty* (Founder & Managing Director, TT INFOTECHS PVT LTD).
 
 📋 *Your Session Details:*
 • *Brand / Company:* ${company || 'Personal Brand'}
@@ -59,22 +59,26 @@ Thank you for requesting a 1-on-1 Business Growth Consultation with *Sonu Saini*
 • *Preferred Slot:* ${preferredTime}
 • *Session Format:* 1-on-1 Strategy Call (Google Meet / WhatsApp Call)
 
-⚡ *Next Steps:*
-Our senior strategy engineer will reach out to you 15 minutes before your scheduled slot. If you have immediate questions, simply reply directly to this message.
+⚡ *What We'll Cover:*
+1. 📈 *100x Growth Blueprint:* Omni-channel sales outreach architecture.
+2. 🤖 *Live AI Platform Walkthrough:* Social Studio & AI Marketing Automation.
+3. 🏢 *Company:* TT INFOTECHS PVT LTD — Software & IT Company in Bhubaneswar.
+4. 📍 *Office:* Santoshi Vihar, Laxmisagar, Bhubaneswar, Odisha 751006.
 
-🌐 Platform Console: https://siegfriedoutreach.com
+💬 *Questions or Need Quick Support?*
+Feel free to message or call us at *+91 93213 19079*.
+
+🌐 Platform: https://siegfriedoutreach.com
 📚 Documentation: https://docs.siegfriedoutreach.com
 
 Best regards,
-*Sonu Saini*
-Founder & Chief Product Architect
-Siegfried Outreach Inc.`;
+*Trilochan Triphaty*
+Founder & Managing Director
+TT INFOTECHS PVT LTD`;
 
-    // 3. Admin WhatsApp Notification Message
-    const adminMessage = `🔥 *NEW VIP 1-ON-1 CONSULTATION LEAD!*
-
-A new growth consultation was just booked on Siegfried Outreach:
-
+    // 3. Admin WhatsApp Notification Message (Sent to Trilochan / Admin: +91 93213 19079)
+    const adminMessage = `🚨 *NEW VIP 1-ON-1 CONSULTATION LEAD!* 🚨
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
 👤 *Name:* ${name}
 📱 *Phone:* ${phone}
 📧 *Email:* ${email || 'N/A'}
@@ -82,8 +86,9 @@ A new growth consultation was just booked on Siegfried Outreach:
 🎯 *Growth Goal:* ${goal}
 ⏰ *Time Window:* ${preferredTime}
 🕒 *Timestamp:* ${timestamp}
-
-👉 *Action:* Open WhatsApp or dial ${phone} to initiate the strategy consultation!`;
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+👉 *Direct WhatsApp Chat:* https://wa.me/${phone.replace(/[^0-9]/g, '')}
+⚡ *Action:* Reach out to confirm meeting link!`;
 
     // Send Customer WhatsApp Notification
     const customerPromise = sendZenderWhatsApp({
@@ -91,8 +96,8 @@ A new growth consultation was just booked on Siegfried Outreach:
       message: customerMessage,
     });
 
-    // Send Admin Notification (to configured Admin number or fallback)
-    const adminPhone = process.env.ADMIN_WHATSAPP_PHONE || '919876543210';
+    // Send Admin Notification to Trilochan Triphaty's WhatsApp (+91 93213 19079)
+    const adminPhone = process.env.ADMIN_WHATSAPP_PHONE || '919321319079';
     const adminPromise = sendZenderWhatsApp({
       recipient: adminPhone,
       message: adminMessage,
