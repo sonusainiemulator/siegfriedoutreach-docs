@@ -1,12 +1,18 @@
 {
-  "title": "AI Tools & Bot Studio",
+  "title": "AI Tools Suite",
   "pages": [
-    "chatbots-and-bot-studio",
-    "ai-writer",
-    "ai-codex-and-assistant",
-    "slide-maker",
+    "ai-chat-assistant",
+    "ai-bot-studio",
+    "ai-blog-writer",
+    "ai-codex",
+    "ai-detect",
+    "ai-live-agent",
+    "ai-transcription",
+    "ai-file-bot",
+    "ai-writing-assistant",
+    "ai-content-rewriter",
+    "ai-slide-maker",
     "ai-avatar-and-video",
-    "visual-generator",
     "hermes-skills"
   ]
 }
