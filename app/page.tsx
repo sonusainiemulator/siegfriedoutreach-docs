@@ -10,27 +10,26 @@ import {
   ArrowRight, 
   Play, 
   Layers, 
-  Flame,
-  Globe2,
-  Video,
-  Building2,
-  Mail,
-  ShieldCheck,
-  Zap,
-  Terminal,
-  Cpu,
-  BookOpen,
-  MessageSquare
+  Flame, 
+  Video, 
+  Building2, 
+  Mail, 
+  ShieldCheck, 
+  Zap, 
+  Terminal, 
+  BookOpen 
 } from 'lucide-react';
+import FeatureSlider from './components/FeatureSlider';
 import BookDemoSection from './components/BookDemoSection';
+import ThemeToggle from './components/ThemeToggle';
 
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-zinc-50 dark:bg-[#090a0f] text-zinc-900 dark:text-zinc-100 selection:bg-indigo-500/20 selection:text-indigo-600 transition-colors duration-200">
-      {/* Enterprise Subtle Grid */}
+      {/* Enterprise Background Grid */}
       <div className="absolute inset-0 bg-enterprise-grid pointer-events-none -z-10" />
 
-      {/* Header / Nav */}
+      {/* Header / Nav with Light/Dark Mode Switcher */}
       <header className="border-b border-zinc-200/80 dark:border-zinc-800/80 bg-white/80 dark:bg-[#090a0f]/80 backdrop-blur-xl sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -47,7 +46,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="flex items-center gap-3 sm:gap-5">
+          <div className="flex items-center gap-2.5 sm:gap-4">
             <Link
               href="/docs"
               className="text-xs sm:text-sm font-medium text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white transition-colors"
@@ -64,8 +63,12 @@ export default function HomePage() {
               href="/docs/getting-started/100x-sales-growth-blueprint"
               className="hidden sm:inline-flex text-xs sm:text-sm font-medium text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white transition-colors"
             >
-              100x Growth Blueprint
+              100x Blueprint
             </Link>
+
+            {/* Dark and Light Mode Switcher in Header */}
+            <ThemeToggle />
+
             <a
               href="#book-demo"
               className="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-700 dark:text-zinc-200 text-xs font-semibold transition-colors"
@@ -79,18 +82,17 @@ export default function HomePage() {
               rel="noreferrer"
               className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold shadow-xs transition-colors"
             >
-              Launch App
-              <ArrowRight className="w-3.5 h-3.5" />
+              Console ➔
             </a>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="relative pt-16 pb-12 sm:pt-24 sm:pb-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center">
+      <section className="relative pt-16 pb-12 sm:pt-20 sm:pb-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 text-xs font-medium mb-6">
           <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-          <span>v2.4 Enterprise Release &bull; Full Bilingual Support (EN + हिंदी)</span>
+          <span>v2.4 Enterprise Release &bull; Full Bilingual Standard (EN + हिंदी)</span>
         </div>
 
         <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-zinc-900 dark:text-white mb-5 leading-tight">
@@ -139,156 +141,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Structured Architecture Matrix */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">
-          <div>
-            <h2 className="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white tracking-tight">
-              Platform Architecture &amp; Core Modules
-            </h2>
-            <p className="text-zinc-500 dark:text-zinc-400 text-xs sm:text-sm mt-1">
-              Engineered for marketing leaders, D2C brand managers, and AI development engineers.
-            </p>
-          </div>
-          <Link href="/docs" className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:underline mt-2 sm:mt-0 inline-flex items-center gap-1">
-            View All 46+ Features <ArrowRight className="w-3 h-3" />
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {/* Module 1 */}
-          <Link
-            href="/docs/social-media/post-composer"
-            className="enterprise-card p-6 rounded-xl bg-white dark:bg-zinc-900/70 border border-zinc-200/80 dark:border-zinc-800/80 hover:border-indigo-500 dark:hover:border-indigo-500 shadow-2xs hover:shadow-md transition-all"
-          >
-            <div className="flex items-center justify-between mb-3">
-              <span className="p-2 rounded-lg bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-200/60 dark:border-blue-500/20">
-                <Share2 className="w-5 h-5" />
-              </span>
-              <span className="text-[10px] font-semibold text-zinc-400 uppercase tracking-wider">Social Studio</span>
-            </div>
-            <h3 className="text-base font-bold text-zinc-900 dark:text-white mb-1.5">
-              Omnichannel Post Composer
-            </h3>
-            <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
-              Write once, customize platform overrides, and dispatch simultaneously to Instagram, X, Facebook, LinkedIn, TikTok, and Reddit.
-            </p>
-            <div className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 flex items-center gap-1">
-              Read Guide <ArrowRight className="w-3 h-3" />
-            </div>
-          </Link>
-
-          {/* Module 2 */}
-          <Link
-            href="/docs/ai-social-manager/indian-festivals-autopilot"
-            className="enterprise-card p-6 rounded-xl bg-white dark:bg-zinc-900/70 border border-zinc-200/80 dark:border-zinc-800/80 hover:border-indigo-500 dark:hover:border-indigo-500 shadow-2xs hover:shadow-md transition-all"
-          >
-            <div className="flex items-center justify-between mb-3">
-              <span className="p-2 rounded-lg bg-amber-50 dark:bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-200/60 dark:border-amber-500/20">
-                <Calendar className="w-5 h-5" />
-              </span>
-              <span className="text-[10px] font-semibold text-zinc-400 uppercase tracking-wider">Automation</span>
-            </div>
-            <h3 className="text-base font-bold text-zinc-900 dark:text-white mb-1.5">
-              India Festivals Autopilot
-            </h3>
-            <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
-              45+ cultural festivals automatically scheduled with brand logo, tailored color schemes, and bilingual festive captions.
-            </p>
-            <div className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 flex items-center gap-1">
-              Read Guide <ArrowRight className="w-3 h-3" />
-            </div>
-          </Link>
-
-          {/* Module 3 */}
-          <Link
-            href="/docs/campaign-hub/broadcasts-and-messaging"
-            className="enterprise-card p-6 rounded-xl bg-white dark:bg-zinc-900/70 border border-zinc-200/80 dark:border-zinc-800/80 hover:border-indigo-500 dark:hover:border-indigo-500 shadow-2xs hover:shadow-md transition-all"
-          >
-            <div className="flex items-center justify-between mb-3">
-              <span className="p-2 rounded-lg bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-500/20">
-                <MessageSquare className="w-5 h-5" />
-              </span>
-              <span className="text-[10px] font-semibold text-zinc-400 uppercase tracking-wider">Campaign Hub</span>
-            </div>
-            <h3 className="text-base font-bold text-zinc-900 dark:text-white mb-1.5">
-              WhatsApp &amp; Telegram Broadcasts
-            </h3>
-            <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
-              Official WhatsApp Cloud API &amp; QR sessions with interactive buttons, segmentation filters, and delivery telemetry.
-            </p>
-            <div className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 flex items-center gap-1">
-              Read Guide <ArrowRight className="w-3 h-3" />
-            </div>
-          </Link>
-
-          {/* Module 4 */}
-          <Link
-            href="/docs/developer-mcp/mcp-overview"
-            className="enterprise-card p-6 rounded-xl bg-white dark:bg-zinc-900/70 border border-zinc-200/80 dark:border-zinc-800/80 hover:border-indigo-500 dark:hover:border-indigo-500 shadow-2xs hover:shadow-md transition-all"
-          >
-            <div className="flex items-center justify-between mb-3">
-              <span className="p-2 rounded-lg bg-purple-50 dark:bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-200/60 dark:border-purple-500/20">
-                <Code2 className="w-5 h-5" />
-              </span>
-              <span className="text-[10px] font-semibold text-zinc-400 uppercase tracking-wider">Developer</span>
-            </div>
-            <h3 className="text-base font-bold text-zinc-900 dark:text-white mb-1.5">
-              Model Context Protocol (MCP)
-            </h3>
-            <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
-              Native MCP server connecting Cursor IDE, Claude Desktop, and autonomous agents directly to Siegfried Outreach data.
-            </p>
-            <div className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 flex items-center gap-1">
-              Read Guide <ArrowRight className="w-3 h-3" />
-            </div>
-          </Link>
-
-          {/* Module 5 */}
-          <Link
-            href="/docs/social-media/publishing-logs-telemetry"
-            className="enterprise-card p-6 rounded-xl bg-white dark:bg-zinc-900/70 border border-zinc-200/80 dark:border-zinc-800/80 hover:border-indigo-500 dark:hover:border-indigo-500 shadow-2xs hover:shadow-md transition-all"
-          >
-            <div className="flex items-center justify-between mb-3">
-              <span className="p-2 rounded-lg bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400 border border-red-200/60 dark:border-red-500/20">
-                <Terminal className="w-5 h-5" />
-              </span>
-              <span className="text-[10px] font-semibold text-zinc-400 uppercase tracking-wider">Reliability</span>
-            </div>
-            <h3 className="text-base font-bold text-zinc-900 dark:text-white mb-1.5">
-              Publishing Logs &amp; Auto-Retry
-            </h3>
-            <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
-              Real-time telemetry queue with error categorization, rate-limit backoff, and 1-click retry engine for failed posts.
-            </p>
-            <div className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 flex items-center gap-1">
-              Read Guide <ArrowRight className="w-3 h-3" />
-            </div>
-          </Link>
-
-          {/* Module 6 */}
-          <Link
-            href="/docs/security-and-members/passkeys-and-biometrics"
-            className="enterprise-card p-6 rounded-xl bg-white dark:bg-zinc-900/70 border border-zinc-200/80 dark:border-zinc-800/80 hover:border-indigo-500 dark:hover:border-indigo-500 shadow-2xs hover:shadow-md transition-all"
-          >
-            <div className="flex items-center justify-between mb-3">
-              <span className="p-2 rounded-lg bg-teal-50 dark:bg-teal-500/10 text-teal-600 dark:text-teal-400 border border-teal-200/60 dark:border-teal-500/20">
-                <ShieldCheck className="w-5 h-5" />
-              </span>
-              <span className="text-[10px] font-semibold text-zinc-400 uppercase tracking-wider">Security</span>
-            </div>
-            <h3 className="text-base font-bold text-zinc-900 dark:text-white mb-1.5">
-              FIDO2 Passkeys &amp; WebAuthn
-            </h3>
-            <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
-              Passwordless biometric authentication with Apple Touch ID, Face ID, Windows Hello, and hardware YubiKey tokens.
-            </p>
-            <div className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 flex items-center gap-1">
-              Read Guide <ArrowRight className="w-3 h-3" />
-            </div>
-          </Link>
-        </div>
-      </section>
+      {/* ALL 46 FEATURE BLOCKS INTERACTIVE SLIDER */}
+      <FeatureSlider />
 
       {/* 1-on-1 Demo & VIP Strategy Section */}
       <BookDemoSection />
