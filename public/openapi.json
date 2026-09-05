@@ -1,0 +1,55 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Siegfried Outreach Documentation & MCP API",
+    "version": "1.0.0",
+    "description": "Documentation search and raw content retrieval API for AI Agents."
+  },
+  "servers": [
+    {
+      "url": "https://docs.siegfriedoutreach.com"
+    }
+  ],
+  "paths": {
+    "/api/search": {
+      "get": {
+        "summary": "Full-text documentation search",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Matched search documents"
+          }
+        }
+      }
+    },
+    "/api/raw/{slug}": {
+      "get": {
+        "summary": "Get raw doc markdown by slug",
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Markdown documentation"
+          }
+        }
+      }
+    }
+  }
+}

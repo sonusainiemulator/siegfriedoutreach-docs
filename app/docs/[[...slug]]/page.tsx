@@ -70,6 +70,38 @@ export default async function Page(props: {
     itemListElement: breadcrumbItems,
   };
 
+  // Google AI Overview & FAQPage Structured Data Schema
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: `How do I use ${page.data.title} in Siegfried Outreach?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: page.data.description || `Siegfried Outreach provides automated tools and bilingual guides for ${page.data.title}. Navigate to the platform dashboard and configure your settings in minutes.`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `What platforms and features are supported for ${page.data.title}?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Siegfried Outreach supports Instagram, Facebook, LinkedIn, YouTube Shorts, X (Twitter), Pinterest, Reddit, WordPress, WhatsApp Cloud API, and Telegram with built-in MCP agent tools and passkey authentication.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `Is there bilingual (Hindi & English) support available for ${page.data.title}?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, Siegfried Outreach offers 100% full bilingual documentation, prompt templates, and AI generation in both English and Hindi (हिंदी).',
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <script
@@ -79,6 +111,10 @@ export default async function Page(props: {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <DocsPage toc={page.data.toc} full={page.data.full}>
         <DocsTitle>{page.data.title}</DocsTitle>

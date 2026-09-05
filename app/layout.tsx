@@ -2,7 +2,9 @@ import './global.css';
 import { RootProvider } from 'fumadocs-ui/provider/next';
 import type { ReactNode } from 'react';
 import type { Metadata, Viewport } from 'next';
+import { Suspense } from 'react';
 import AiDocsAssistant from './components/AiDocsAssistant';
+import Analytics from './components/Analytics';
 
 export const viewport: Viewport = {
   themeColor: '#6366f1',
@@ -50,6 +52,9 @@ export const metadata: Metadata = {
   category: 'Technology & Marketing Software',
   alternates: {
     canonical: 'https://docs.siegfriedoutreach.com',
+    types: {
+      'application/rss+xml': 'https://docs.siegfriedoutreach.com/feed.xml',
+    },
     languages: {
       'en-US': 'https://docs.siegfriedoutreach.com',
       'hi-IN': 'https://docs.siegfriedoutreach.com',
@@ -85,6 +90,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
@@ -96,12 +102,12 @@ export const metadata: Metadata = {
   other: {
     'llms-txt': 'https://docs.siegfriedoutreach.com/llms.txt',
     'ai-agent-docs': 'https://docs.siegfriedoutreach.com/llms-full.txt',
+    'indexnow-key': 'siegfriedoutreachindexnow2026',
     'google-site-verification': '', // Ready for tomorrow GSC verification code
   },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-  // Rich Structured Schema for Google SEO, AEO & AI Engines
   const websiteJsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -163,8 +169,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Documentation" />
+        <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="Siegfried Docs RSS Feed" />
       </head>
       <body className="flex flex-col min-h-screen antialiased selection:bg-indigo-500/20 selection:text-indigo-600 relative">
+        <Suspense fallback={null}>
+          <Analytics />
+        </Suspense>
         <RootProvider search={{ options: { api: '/api/search' } }}>
           {children}
           <AiDocsAssistant />

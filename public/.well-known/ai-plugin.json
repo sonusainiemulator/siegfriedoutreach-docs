@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Siegfried Outreach Docs",
+  "name_for_model": "siegfried_outreach_docs",
+  "description_for_human": "Search official Siegfried Outreach guides, API reference, AI Social Studio, Indian festival autopilot, and MCP tool workflows.",
+  "description_for_model": "Plugin and knowledge reference for Siegfried Outreach Platform. Use this to lookup social media publishing methods, festival dates, WhatsApp campaigns, passkey biometrics, and MCP agent tools.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://docs.siegfriedoutreach.com/openapi.json"
+  },
+  "logo_url": "https://docs.siegfriedoutreach.com/images/social-studio-composer.png",
+  "contact_email": "support@siegfriedoutreach.com",
+  "legal_info_url": "https://siegfriedoutreach.com/terms"
+}
