@@ -3,15 +3,15 @@ import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
 export const baseOptions: BaseLayoutProps = {
   nav: {
     title: (
-      <div className="flex items-center gap-2 font-bold tracking-tight">
-        <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 text-white shadow-md shadow-indigo-500/20">
+      <div className="flex items-center gap-2.5 font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
+        <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-indigo-600 text-white font-bold shadow-xs">
           ⚡
         </span>
-        <span className="bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 bg-clip-text text-transparent font-extrabold text-lg">
-          Siegfried
+        <span className="font-bold text-base tracking-tight">
+          Siegfried <span className="text-indigo-600 dark:text-indigo-400 font-medium">Docs</span>
         </span>
-        <span className="text-xs px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-500 font-semibold border border-indigo-500/20">
-          Docs & Guide
+        <span className="hidden sm:inline-flex text-[10px] uppercase font-semibold px-2 py-0.5 rounded-md bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 border border-zinc-200 dark:border-zinc-700/60">
+          v2.4
         </span>
       </div>
     ),
@@ -19,20 +19,24 @@ export const baseOptions: BaseLayoutProps = {
   },
   links: [
     {
-      text: 'User Guide',
+      text: 'Overview',
       url: '/docs',
       active: 'nested-url',
     },
     {
-      text: 'MCP Integration',
+      text: 'API & MCP',
       url: '/docs/developer-mcp/mcp-overview',
     },
     {
-      text: '📅 Book Free 1-on-1 Demo',
+      text: '100x Growth Blueprint',
+      url: '/docs/getting-started/100x-sales-growth-blueprint',
+    },
+    {
+      text: 'Book Live Demo',
       url: '/#book-demo',
     },
     {
-      text: 'Open App ➔',
+      text: 'Console App ➔',
       url: 'https://siegfriedoutreach.com',
       external: true,
     },
