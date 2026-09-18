@@ -3,6 +3,7 @@
   "pages": [
     "ai-chat-assistant",
     "ai-bot-studio",
+    "ai-bot-widget-realtime-chat",
     "ai-blog-writer",
     "ai-codex",
     "ai-detect",

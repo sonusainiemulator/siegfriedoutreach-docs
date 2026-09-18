@@ -4,6 +4,37 @@ All documentation revisions, bilingual guides, SEO enhancements, and AI agent op
 
 ---
 
+## 🚀 [2026-09-18 20:20:00 CEST] — September 18, 2026 (AI Bot Widget Real-Time Admin Chat & Live Handover Guide)
+
+### ⚡ 1. Dedicated AI Bot Widget Real-Time Chat & Live Handover Guide (`ai-bot-widget-realtime-chat.mdx`)
+- **Dual-Channel Real-Time Pipeline Documentation**:
+  - Detailed technical explanation of visitor-facing **Ably Realtime** pub/sub channels (`chat:[chatbotId]:[sessionId]`) achieving <80ms message delivery.
+  - Complete architecture of the internal **Socket.io** staff mesh (`user_[adminUserId]`) with audio chime alerts and desktop notifications.
+  - Architectural sequence diagram illustrating message lifecycle from visitor query to AI evaluation, agent takeover, and live dispatch.
+- **Interaction Modes Comparison Table**:
+  - `ai_only`: Autonomous knowledge base RAG responses.
+  - `hybrid`: AI-first with keyword and intent-based live agent escalation.
+  - `human_only`: Direct live chat routing to online customer service teams.
+- **Step-by-Step Bilingual Walkthrough (English + हिंदी)**:
+  - Setting up interaction modes and custom escalation keywords in AI Bot Studio.
+  - Embedding the universal JavaScript widget snippet on any website.
+  - Receiving audio alerts and managing queues in **AI Live Agent** (`/ai-live-agent`).
+  - Typing real-time replies, dispatching file attachments, and using **AI Copilot Smart Suggestions**.
+  - Writing internal staff notes (`mode: note`) locked with 🔒 icon.
+  - Resolving sessions and smoothly returning conversation control to the AI.
+- **Comprehensive Industry Case Studies (Bilingual: English + हिंदी)**:
+  - **D2C E-Commerce**: Luxury watch brand recovering $28,000 in abandoned carts via live agent checkout assistance.
+  - **Healthcare & Dental Clinics**: Emergency patient triage reducing response time from 18 minutes to 12 seconds.
+  - **Real Estate Agencies**: High-net-worth buyer site visit bookings closing 7 commercial leases.
+  - **B2B Enterprise SaaS**: Compliance and custom SLA sales cycles reduced from 45 to 14 days.
+
+### 🎧 2. AI Live Agent & AI Bot Studio Updates
+- **AI Live Agent (`ai-live-agent.mdx`)**: Expanded with real-time takeover capabilities, Ably telemetry, and internal staff notes.
+- **AI Bot Studio (`ai-bot-studio.mdx`)**: Added real-time live chat widget configuration, hybrid handover options, and escalation trigger keywords.
+- **Navigation Metadata (`ai-studio/meta.json`)**: Registered `ai-bot-widget-realtime-chat` in top-level sidebar navigation.
+
+---
+
 ## 🚀 [2026-09-05 21:56:00 CEST] — September 5, 2026 (Executive Profile Update & Official Authority Badges)
 
 ### 👤 1. Executive Leadership & Company Details Update
