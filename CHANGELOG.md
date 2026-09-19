@@ -4,6 +4,46 @@ All documentation revisions, bilingual guides, SEO enhancements, and AI agent op
 
 ---
 
+## 🚀 [2026-09-19 21:00:00 CEST] — September 19, 2026 (Hermes AI Skills & AI Talking Video Studio Bilingual Guides)
+
+### 🤖 1. Comprehensive Hermes AI Skills & 24/7 Autonomous Growth Guide (`hermes-skills.mdx`)
+- **Flagship 4 Core Pillars of Autonomous Agent Growth**:
+  - Detailed architecture: Deep Domain Specialization (0% generic robot fluff), Self-Improving Loop (adaptive campaign memory), Omnichannel Auto-Repurposing (9 channels synced), and Zero-Hallucination Guardrails (100% brand safe).
+- **Before vs. After Comparative Matrix**:
+  - Full comparison table contrasting generic ChatGPT prompts with 24/7 Hermes Autonomous Skills across strategy, output quality, feedback loops, multi-platform sync, and time investment.
+- **4-Step Visual Roadmap to 10x Business Growth**:
+  - Step 1: Founder Story & Niche setup.
+  - Step 2: 5 Daily Content Pillars.
+  - Step 3: Brand Voice & Strict Guardrails.
+  - Step 4: Turn ON the 24/7 Autonomous Loop.
+- **1-Click Readymade Industry Niche Starters**:
+  - Pre-engineered templates for Mental Health Care & Psychology (Christopher Siegfried, MA), D2C E-Commerce Brand Growth, B2B SaaS Tech Founder Authority, and Healthcare Clinic Practice Authority.
+- **Bilingual Step-by-Step Manual & Industry Case Studies**:
+  - Complete English and हिंदी coverage with real-world case studies for Mental Health Care practice and D2C brands.
+
+### 🎬 2. AI Avatar & Talking Video Studio Daily Video Guide (`ai-avatar-and-video.mdx`)
+- **3-Step Daily Video Pipeline**:
+  - Step 1: Script Generation via Hermes Skills (featuring 1-Click Christopher Siegfried, MA Mental Health Presets).
+  - Step 2: Talking Video Studio rendering (HeyGen 2.0 Digital Twin, Hedra Character-2, LivePortrait HD, D-ID) with 9:16 vertical video format.
+  - Step 3: Multi-channel dispatch via `/social-media/create-post` across Instagram Reels, TikTok, YouTube Shorts, and Pinterest Video Pins.
+- **Bilingual Walkthrough & Real-World Case Studies**:
+  - Complete English and हिंदी guides with real-world scenarios for academic burnout resilience coaching and healthcare clinics.
+
+---
+
+## 🚀 [2026-09-18 20:45:00 CEST] — September 18, 2026 (AI Live Agent Website Bot Channel Filter & Badges)
+
+### 🌐 1. Dedicated "Website Bot" Channel Filter & Chatbot Conversion Surfacing
+- **Website Bot Channel Filter Documentation**:
+  - Documented the new **Website Bot** channel filter button in AI Live Agent Inbox (`/ai-live-agent`).
+  - Explained one-click isolation of website visitor conversations, qualified leads, and escalated sessions.
+- **Bot Identity & Origin Badges**:
+  - Documented the `🤖 {chatbot.name}` visual badge in conversation list rows and live chat header for multi-bot tracking.
+- **Bilingual Guide Updates (English + हिंदी)**:
+  - Updated `ai-live-agent.mdx` with bilingual instructions on utilizing the Website Bot channel filter and bot origin badges.
+
+---
+
 ## 🚀 [2026-09-18 20:20:00 CEST] — September 18, 2026 (AI Bot Widget Real-Time Admin Chat & Live Handover Guide)
 
 ### ⚡ 1. Dedicated AI Bot Widget Real-Time Chat & Live Handover Guide (`ai-bot-widget-realtime-chat.mdx`)
